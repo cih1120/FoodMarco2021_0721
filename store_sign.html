@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no , minimal-ui" />
+
+    <title>Food Marco – 線上簽約系統</title>
+    <meta name='description' content='Food Marco線上簽約系統。無需任何預付費用，簡單完成線上簽署客戶導店看得見！'>
+    <meta name='keywords' content='行銷, 美食, 部落客, 食記, 評論'>
+    <link rel="icon" href="img/favo.ico" type="image/x-icon" />
+    <!-- title設定 -->     
+    <meta property="og:site_name" content="Food Marco" />
+    <meta property="og:type" content='website' />
+      <meta name="description" content='Food Marco線上簽約系統。無需任何預付費用，簡單完成線上簽署客戶導店看得見！'>
+      <meta property="og:title" content="Food Marco – 線上簽約系統">
+      <meta property="og:image" content="https://github.com/hannah19951120/Food-Marco-/blob/master/img/og_img.png?raw=true">
+	<!-- og FB 設定 -->
+    <link rel="stylesheet" href="css/all.css">
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="js/axios.min.js"></script>
+    <script type="text/javascript" src="js/pop_lightBox.js"></script>
+    <script type="text/javascript" src="js/js.js"></script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KZ87587');</script>
+    <!-- End Google Tag Manager -->
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZ87587"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="header__banner  disBlock-table">
+        <div class="wrap">
+         <p>需要協助嗎？立即聯絡我們！</p>
+         <div class="header__banner_download">
+            <a href="#" target="_blank" id="gtm-engage-sign-advisory_mbFix" class="openPop_advisory openPop" data-pop="advisory">
+             <p data-pop="advisory">諮詢專人</p>
+             <!-- <img src="img/symbol/download-arrow.svg" alt="下載Food Marco"> -->
+            </a>
+         </div>
+        </div>
+    </div>
+   <header class="wrap header py-2">
+       <a href="index.html"><h1 class="header__logo">Food Marco</h1></a>
+       <a href="#" class="header__burger  disBlock-table">
+           <span></span>
+           <span></span>
+           <span></span>
+       </a>
+       <ul class="header__nav">
+            <li><a href="https://bit.ly/2Sg0Myf" target="_blank" class="h4">最新活動</a></li>
+            <li><a href="tutorial.html" class="h4">新手上路</a></li>
+            <li><a href="foodie.html" class="h4">成為分享家</a></li>
+            <li><a href="store.html" class="h4">合作餐廳</a></li>
+            <li><a href="business.html" class="h4">成為合作夥伴</a></li>
+       </ul>
+   </header>
+   <div class="header__space  disBlock-table"></div>
+
+   <!-- 固定Layout -->
+
+   <!-- cookie確認Pop -->
+   <section class="overray" data-pop="cookieComfirm">
+    <div class="lightBox">
+        <a href="#" class="advisoryClose" id="gtm-engage-contract-comfirmClose">
+            <span></span>
+            <span></span>
+        </a>
+        <div class="lightBox__content t-center">
+            <h5 class="t-muted">Food Marco簽約系統結合技術加密傳輸。為嚴格確保電子簽名法律效力及安全性，出現合約連接失敗時請配合以下設定：</h5>
+            <div class="cookieComfirm mt-2 t-center" data-cookieComfirmContent="Init" style="display: block;">
+                <h4 class="t-strong">請問您使用的裝置為？</h4>
+                <a href="#" data-cookieComfirm="Desktop" class="cookieComfirm__option h3 t-bold t-black">桌機<span class="t-primary h3 ml-2 t-bold">></span></a>
+                <a href="#" data-cookieComfirm="Mobile" class="cookieComfirm__option h3 t-bold t-black">手機<span class="t-primary h3 ml-2 t-bold">></span></a>
+            </div>
+            <div class="cookieComfirm mt-2 t-center" data-cookieComfirmContent="Desktop" style="display: none;">
+                <h4 class="t-strong">請問您使用的瀏覽器為？</h4>
+                <a href="#" data-cookieComfirm="Chrome" class="cookieComfirm__option h3 t-bold t-black">Chrome<span class="t-primary h3 ml-2 t-bold">></span></a>
+                <a href="#" data-cookieComfirm="FireFox" class="cookieComfirm__option h3 t-bold t-black">FireFox<span class="t-primary h3 ml-2 t-bold">></span></a>
+                <a href="#" data-cookieComfirm="Edge" class="cookieComfirm__option h3 t-bold t-black">Edge<span class="t-primary h3 ml-2 t-bold">></span></a>
+            </div>
+            <div class="cookieComfirm mt-2 t-center" data-cookieComfirmContent="Mobile" style="display: none;">
+                <h4 class="t-strong">請問您使用的瀏覽器為？</h4>
+                <a href="#" data-cookieComfirm="m-Safari" class="cookieComfirm__option h3 t-bold t-black">Safari<span class="t-primary h3 ml-2 t-bold">></span></a>
+                <a href="#" data-cookieComfirm="m-Chrome" class="cookieComfirm__option h3 t-bold t-black">Chrome<span class="t-primary h3 ml-2 t-bold">></span></a>
+                <a href="#" data-cookieComfirm="m-other" class="cookieComfirm__option h3 t-bold t-black">其他瀏覽器<span class="t-primary h3 ml-2 t-bold">></span></a>
+            </div>
+            <!-- Chrome -->
+            <div class="cookieComfirm mt-2 t-left" data-cookieComfirmContent="Chrome" style="display: none;">
+                <h3 class="t-strong">Chrome開啟第三方cookie</h3>
+                <div class="cookieComfirm__content">
+                    <img src="img/p_sign/chrome.png" alt="">
+                    <div>
+                        <h3 class="t-bold mb-1">進入<span class="h3 t-warning t-bold">偏好設定</span></h3>
+                        <h5 class="mb-2">先進入「隱私權和安全性」，確認無勾選「封鎖第三方Cookie」再重新開啟簽約頁即可開始簽約！</h5>
+                        <div class="advisory">
+                            <a href="#" class="t-muted openPop_advisory openPop" id="gtm-engage-sign-advisory" data-pop="advisory">
+                                <h5>遇上困難了嗎？</h5>
+                                <h5 class="advisory--underline"  data-pop="advisory">立即諮詢專人！</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FireFox -->
+            <div class="cookieComfirm mt-2 t-left" data-cookieComfirmContent="FireFox" style="display: none;">
+                <h3 class="t-strong">FireFox開啟第三方cookie</h3>
+                <div class="cookieComfirm__content">
+                    <img src="img/p_sign/firefox.png" alt="">
+                    <div>
+                        <h3 class="t-bold mb-1">進入<span class="h3 t-warning t-bold">設定</span></h3>
+                        <h5 class="mb-2">先進入「隱私權和安全性」，確認加強型追蹤保護勾選「標準」再重新開啟簽約頁即可開始簽約！</h5>
+                        <div class="advisory">
+                            <a href="#" class="t-muted openPop_advisory openPop" id="gtm-engage-sign-advisory"  data-pop="advisory">
+                                <h5>遇上困難了嗎？</h5>
+                                <h5 class="advisory--underline"  data-pop="advisory">立即諮詢專人！</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Edge -->
+            <div class="cookieComfirm mt-2 t-left" data-cookieComfirmContent="Edge" style="display: none;">
+                <h3 class="t-strong">Edge開啟第三方cookie</h3>
+                <div class="cookieComfirm__content">
+                    <img src="img/p_sign/edge.jpg" alt="">
+                    <div>
+                        <h3 class="t-bold mb-1">進入<span class="h3 t-warning t-bold">設定</span></h3>
+                        <h5 class="mb-2">先進入「Cookie和網站權限」，確認無勾選「封鎖第三方Cookie」再重新開啟簽約頁即可開始簽約！</h5>
+                        <div class="advisory">
+                            <a href="#" class="t-muted openPop_advisory openPop" id="gtm-engage-sign-advisory" data-pop="advisory">
+                                <h5>遇上困難了嗎？</h5>
+                                <h5 class="advisory--underline"  data-pop="advisory">立即諮詢專人！</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- m-Safari -->
+            <div class="cookieComfirm mt-2 t-left" data-cookieComfirmContent="m-Safari" style="display: none;">
+                <h3 class="t-strong">Safari開啟第三方cookie</h3>
+                <div class="cookieComfirm__content">
+                    <img src="img/p_sign/m_safari.png" alt="">
+                    <div>
+                        <h3 class="t-bold mb-1">進入<span class="h3 t-warning t-bold">設定</span></h3>
+                        <h5 class="mb-2">先進入「Safari」，確認無勾選「封鎖第三方Cookie」再重新開啟簽約頁即可開始簽約！</h5>
+                        <div class="advisory">
+                            <a href="#" class="t-muted openPop_advisory openPop" id="gtm-engage-sign-advisory" data-pop="advisory">
+                                <h5>遇上困難了嗎？</h5>
+                                <h5 class="advisory--underline"  data-pop="advisory">立即諮詢專人！</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- m-Chrome -->
+            <div class="cookieComfirm mt-2 t-left" data-cookieComfirmContent="m-Chrome" style="display: none;">
+                <h3 class="t-strong">Chrome開啟第三方cookie</h3>
+                <div class="cookieComfirm__content">
+                    <img src="img/p_sign/m-Chrome.png" alt="">
+                    <div>
+                        <h3 class="t-bold mb-1">進入<span class="h3 t-warning t-bold">設定</span></h3>
+                        <h5 class="mb-2">先進入「Chrome」，勾選「允許跨網域追蹤」再重新開啟簽約頁即可開始簽約！</h5>
+                        <div class="advisory">
+                            <a href="#" class="t-muted openPop_advisory openPop" id="gtm-engage-sign-advisory" data-pop="advisory">
+                                <h5>遇上困難了嗎？</h5>
+                                <h5 class="advisory--underline"  data-pop="advisory">立即諮詢專人！</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- m-other -->
+            <div class="cookieComfirm mt-2 t-left" data-cookieComfirmContent="m-other" style="display: none;">
+                <h3 class="t-strong">其他瀏覽器</h3>
+                <div class="cookieComfirm__content mt-2">
+                  
+                    <div>
+                        <h3 class="t-bold mb-1">請尋找瀏覽器的<span class="t-warning h3">相關設定</span></h3>
+                        <h5 class="mb-4">尋找是否確認無封鎖「第三方cookie設定」，再重新開啟簽約頁面開始簽約。或使用別的瀏覽器來開啟網頁。</h5>
+                        <div class="advisory">
+                            <a href="#" class="t-muted openPop_advisory openPop" id="gtm-engage-sign-advisory" data-pop="advisory">
+                                <h5>遇上困難了嗎？</h5>
+                                <h5 class="advisory--underline"  data-pop="advisory">立即諮詢專人！</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-1">
+                <h6 class="t-muted">需要緊急專人協助? 立即致電</h6>
+                <a href="tel:+886-2-77516066" class="t-bold">02-7751-6066</a>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+
+   <!-- 開啟諮詢專人 -->
+   <section class="advisoryPop pop" data-pop="advisory">
+    <div class="advisoryContent">
+        <a href="#" class="advisoryClose closePop_advisory">
+            <span></span>
+            <span></span>
+        </a>
+        <h1 class="displayH1">聯絡我們</h1>
+        <h3 class="t-bold mt-2 mb-2">留下您的資料，專人會盡快與您聯絡說明。</h3>
+        <form action="" class="advisoryForm" id="advisoryForm">
+            <div class="advisoryForm__left">
+                <div class="advisoryForm__box">
+                    <label for="advisoryName" class="h5 t-bold">如何稱呼您<span class="t-warning h5">*</span></label>
+                    <span class="t-warning advisoryForm__box--required h6 t-bold" data-required="advisoryName">必填</span>
+                    <input type="text" placeholder="請輸入您的姓名" name="name" id="advisoryName" class="advisoryRequired advisoryInput">
+                </div>
+                <div class="advisoryForm__box">
+                    <label for="advisoryRestaurant" class="h5 t-bold">您的餐廳名稱<span class="t-warning h5">*</span></label>
+                    <span class="t-warning advisoryForm__box--required h6 t-bold" data-required="advisoryRestaurant">必填</span>
+                    <input type="text" placeholder="請輸入您的餐廳名稱" name="resturantName" id="advisoryRestaurant" class="advisoryRequired advisoryInput">
+                </div>
+                <div class="advisoryForm__box">
+                    <label for="advisoryTel" class="h5 t-bold">您的聯絡方式<span class="t-warning h5">*</span></label>
+                    <span class="t-warning advisoryForm__box--required h6 t-bold" data-required="advisoryTel">必填</span>
+                    <input type="number" placeholder="09 123 456 78" name="Tel" id="advisoryTel" class="advisoryRequired advisoryInput">
+                </div>
+            </div>
+            <div class="advisoryForm__right">
+                <div class="advisoryForm__box">
+                    <label for="advisoryContact" class="h5 t-bold">您方便的聯絡時間？<span class="t-warning h5">*</span></label>
+                    <span class="t-warning advisoryForm__box--required h6 t-bold" data-required="advisoryContact">必填</span>
+                    <select name="area" id="advisoryContact" class="advisoryRequired advisoryInput">
+                        <option value="" disabled selected hidden>請選擇聯絡時間</option>
+                        <option value="9:00-12:00">早上(9:00-12:00)</option>
+                        <option value="12:00-17:00">下午(12:00-17:00)</option>
+                        <option value="18:00-22:00">晚上(18:00-22:00)</option>
+                        <option value="anyTime">隨時皆可</option>
+                    </select>
+                </div>
+                <div class="advisoryForm__box">
+                    <label for="advisoryMemo" class="h5 t-bold">任何想詢問的資訊</label>
+                    <textarea type="text" placeholder="可以留下任何想詢問的資訊（免費行銷、撥款方式⋯⋯）" name="message" rows="5" id="advisoryMemo" class="advisoryInput"></textarea>
+                </div>
+            </div>
+            <input type="submit" value="送出資料" class="h5" id="advisorySubmit">
+        </form>
+        <div class="d-flex-row mt-4">
+            <h6>需要緊急專人協助? 立即致電</h6>
+            <a href="tel:+886-2-77516066" class="h6">02-7751-6066</a>
+        </div>
+    </div>
+   </section>
+
+
+   <!-- storeHero開始 -->
+    <section class="contractHero">
+        <div class="contractHero__block wrap">
+            <h1 class="t-strong displayH1 mb-2">Food Marco</h1>
+            <h1 class="t-strong displayH1 mb-3">線上簽約系統</h1>
+            <h4 class="t-bold mb-2">0預付餐廳行銷專家<br>無需額外安裝設備，簡單就GO</h4>
+            <h6 class="t-white">*目前 Food Marco 服務地區以台北市為主</h6>
+         </div>
+     </section>
+     
+    <!-- breadcrumbs開始 -->
+    <section class="breadcrumbs wrap">
+        <ul class="breadcrumbsNav">
+            <li>
+                <a href="business.html" class="h6 breadcrumbsNav__item">成為合作夥伴</a>
+            </li>
+            <li>
+                <a href="contract_procedure.html" class="h6 breadcrumbsNav__item">金流與簽約說明</a>
+            </li>
+            <li>
+                <a href="store_sign.html" class="h6 breadcrumbsNav__item">簽署相關文件</a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- signExplanation開始 -->
+    <section class="signExplanation wrap">
+        <div class="signExplanation__content">
+            <h5 class="t-left mt-3">請閱讀以下文件，並於最底下填寫資料與簽名，<br>
+                送出資料後即簽署完成，7個工作日內專人會與您聯絡。</h5>
+            <div class="advisory">
+                <a href="#" class="t-muted openPop_advisory openPop" id="gtm-engage-sign-advisory">
+                    <h5>遇上困難了嗎？</h5>
+                    <h5 class="advisory--underline" data-pop="advisory">立即諮詢專人！</h5>
+                </a>
+            </div>
+            <div class="advisory t-muted d-flex-row">
+                    <h5>或直接請求專人協助</h5>
+                    <a href="tel:+886-2-77516066" class="h5 advisory--underline t-muted">02-7751-6066</a>
+            </div>
+        </div>
+        <div class="signExplanation__img">
+            <img src="img/p_sign/success.jpg" alt="簽署完成畫面" class="mb-2">
+            <p class="t-center"><span class="t-muted triangle">▲</span> 出現此畫面即表示簽署完成</p>
+        </div>
+
+    </section>
+
+    <section class="dottedSign wrap pb-5">
+        <div class="dottedSign__content" id="dottedSignIframe"> 
+            <div class="dottedSign__login">
+                <img src="img/symbol/Ellipsis-2.2s-200px.svg">
+            </div>
+                <!-- <iframe src='https://www.dottedsign.com/integration/frame-kiosk?file_name=馬可波羅科技_FoodMarco服務契約書_202105&template_id=2168&stages=[{"need_otp":true,"verify_with":["phone"],"requisite":{"name":"required","email":"required","phone":"required"}}]&is_inform_owner=true&user_token=98376b52c31c253ad65dea7c4a4e44b77ecbab7adc37c96b66b5e931a1920577&api_key=kdan_api_6DFvluf_e8xjrUA6jp3bUw' frameborder="0" style="width:100%;height:800px"></iframe> -->
+        </div>
+            <div class="advisory t-muted d-flex-row"><h5>如無法顯示請合約</h5><a href="#" class="h5 advisory--underline t-muted openPop_comfirmOpen openPop" data-pop="cookieComfirm" id="gtm-engage-sign-cookieComfirm">請點此解決</a></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer b-primary">
+        <div class="wrap">
+            <div class="footer__left mb-3">
+                <h2 class="h4 t-strong">馬可波羅科技股份有限公司</h2>
+                <nav class="header__nav">
+                    <ul class="footer__left_map mt-1">
+                        <li><a href="https://foodmarco.zendesk.com/hc/zh-tw/articles/360052183052-Food-Marco-%E9%9A%B1%E7%A7%81%E6%AC%8A%E6%94%BF%E7%AD%96" target="_blank">隱私權政策</a></li>
+                        <li><a href="https://marcopolo-corp.com/index.html" target="_blank">關於我們</a></li>
+                        <li><a href="https://foodmarco.zendesk.com/hc/zh-tw/articles/360052183072-Food-Marco%E6%9C%83%E5%93%A1%E6%9C%8D%E5%8B%99%E6%A2%9D%E6%AC%BE" target="_blank">服務條款</a></li>
+                        <li><a href="https://www.104.com.tw/company/1a2x6bl0r7" target="_blank">人才招募</a></li>
+                        <li><a href="business.html">店家專區</a></li>
+                        <li><a href="https://tw.foodmarco.com/advertise/adPlane/index.html" target="_blank">全通路行銷方案</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__right mb-3">
+                <div>
+                    <div class="footer__right_copyright">
+                        <span class="span t-white">© 2020 Marco Technology LTD. All Rights Reserved</span>
+                    </div>
+                    <div class="footer__right_mail mt-1">
+                        <i class="icon-mail"></i>
+                        <span class="span t-white t-strong">cs@foodmarco.com</span>
+                    </div>
+                </div>
+                <div class="footer__right_sns ml-2">
+                    <a href="https://www.facebook.com/Food-Marco-109774030939135/" class="footer__right_sns--fb" target="_blank"><i class="icon-fb"></i></a>
+                    <!-- <a href="https://www.facebook.com/Food-Marco-109774030939135/" class="footer__right_sns--ig" target="_blank"><i class="icon-ig"></i></a> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="getnewsSubmit" class="d-none"></div>
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <script type="text/javascript" src="js/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+        <!-- Start of foodmarco Zendesk Widget script -->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=74b2836f-0573-46c6-bacb-e0c7e7ee7bf8"> </script>
+<!-- End of foodmarco Zendesk Widget script -->
+
+<script>
+    // const templateIdUrl = `https://dev1-api.foodmarco.com/api/v1/contact/ds/templates`;
+    // axios
+    //     .post(`${templateIdUrl}`)
+    //     .then((response) => {
+    //         console.log(response.data.data.api_response.templates[0]);
+    //         let data = response.data.data.api_response.templates[0];
+    //         let filename = data.file_name;
+    //         let templateid = data.template_id;
+    //         getToken(filename,templateid);
+    //     })
+    //     .catch((error) => {
+    //         console.log(error);
+    //     });
+        let filename = '馬可波羅科技_FoodMarco服務契約書_202105';
+        let templateid = 2168;
+
+    //取得token
+    let getToken = ()=>{
+        let token;
+        // let api_key= kdan_api_6DFvluf_e8xjrUA6jp3bUw;
+        const getTokenUrl = `https://dev1-api.foodmarco.com/api/v1/contact/ds/login`;
+        const iframeId = document.getElementById('dottedSignIframe');
+        axios
+            .post(getTokenUrl)
+            .then((response) => {
+                token = response.data.data.token;
+                // console.log(filename,templateid);
+                let iframeUrl = `https://www.dottedsign.com/integration/frame-kiosk?file_name=${filename}&template_id=${templateid}&stages=[{"informable":true,"need_otp":true,"verify_with":["phone"],"requisite":{"name":"required","email":"required","phone":"required"}}]&is_inform_owner=true&user_token=${token}&api_key=kdan_api_6DFvluf_e8xjrUA6jp3bUw`;
+                let iframeHtml = `<iframe src='${iframeUrl}' frameborder="0" style="width:100%;height:650px"></iframe>`;
+                iframeId.innerHTML = iframeHtml;
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
+    getToken();
+    // 'https://www.dottedsign.com/integration/frame-kiosk?file_name=馬可波羅科技_FoodMarco服務契約書_202105&template_id=2168&stages=[{"need_otp":true,"verify_with":["phone"],"requisite":{"name":"required","email":"required","phone":"required"}}]&is_inform_owner=true&user_token=98376b52c31c253ad65dea7c4a4e44b77ecbab7adc37c96b66b5e931a1920577&api_key=kdan_api_6DFvluf_e8xjrUA6jp3bUw`'
+
+</script>
+<script>
+    //---------合約頁cookieComfirm---------
+    $('.openPop_comfirmOpen').click(function(){
+        $('.cookieComfirm').hide();
+        $('.cookieComfirm[data-cookieComfirmContent="Init"]').show();
+    });
+    $('a[data-cookieComfirm]').click(function(event){
+        event.preventDefault();
+        let optionValue = event.target.dataset.cookiecomfirm;
+        console.log(optionValue);
+        $('.cookieComfirm').hide();
+        $('.cookieComfirm[data-cookieComfirmContent='+optionValue+']').show();
+        
+    });
+</script>
+
+</body>
+</html>

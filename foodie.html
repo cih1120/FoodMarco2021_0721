@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no , minimal-ui" />
+
+    <title>Food Marco – 分享家寫食記、不審稿、賺收入、共創真實內容平台</title>
+    <meta name='description' content='Food Marco擁有暢所欲言不審稿的撰寫食記平台，並首創分潤機制，讓真實分享獲得實質肯定。一起加入Food Marco，經驗傳承賺M幣，共創真實不業配內容平台。'>
+    <meta name='keywords' content='部落客, 食記, 評論, 美食, 餐廳'>
+    <link rel="icon" href="img/favo.ico" type="image/x-icon" />
+    <!-- title設定 -->
+    <meta property="og:site_name" content="Food Marco" />
+    <meta property="og:type" content='website' />
+    <meta name="description" content="Food Marco擁有暢所欲言不審稿的撰寫食記平台，並首創分潤機制，讓真實分享獲得實質肯定。一起加入Food Marco，經驗傳承賺M幣，共創真實不業配內容平台。">
+    <meta property="og:title" content="Food Marco – 分享真實內容賺分潤的餐食平台">
+    <meta property="og:image"
+        content="https://github.com/hannah19951120/Food-Marco-/blob/master/img/og_img.png?raw=true">
+    <!-- og FB 設定 -->
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="js/js.js"></script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KZ87587');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZ87587" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- 認可是什麼 -->
+    <section class="overray" data-pop="approbate">
+        <div class="foodiePop">
+            <a href="#" class="advisoryClose foodiePop__close">
+                <span></span>
+                <span></span>
+            </a>
+            <h5 class="t-warning t-bold mb-1">
+                認可是什麼
+            </h5>
+            <h6>
+                每個認可皆是真實體驗，美食客要去消費你分享的食記，
+    並且使用Food Marco付款就可以認可你！
+            </h6>
+        </div>
+    </section>
+
+    <!-- 平均消費是什麼 -->
+    <section class="overray" data-pop="consumePrice">
+        <div class="foodiePop">
+            <a href="#" class="advisoryClose foodiePop__close">
+                <span></span>
+                <span></span>
+            </a>
+            <h5 class="t-warning t-bold mb-1">
+                平均消費金額怎麼填？
+            </h5>
+            <h6>
+                可依照你分享餐廳的平均客單價來做參考。
+            </h6>
+        </div>
+    </section>
+
+    <!-- 認可率什麼 -->
+    <section class="overray" data-pop="approbateMonth">
+        <div class="foodiePop">
+            <a href="#" class="advisoryClose foodiePop__close">
+                <span></span>
+                <span></span>
+            </a>
+            <h5 class="t-warning t-bold mb-1">
+                認可率如何計算？
+            </h5>
+            <h6>
+                收藏我真實食記的美食客，成功認可我的真實食記比率
+            </h6>
+        </div>
+    </section>
+
+    <div class="header__banner  disBlock-table">
+        <div class="wrap">
+            <p>即刻開始體驗Food Marco！</p>
+            <div class="header__banner_download">
+                <a href="https://food-marco.app.link/officialweb-foodie" target="_blank" id="gtm-foodie-download-mbFix">
+                    <p>立即下載</p>
+                    <img src="img/symbol/download-arrow.svg" alt="下載Food Marco">
+                </a>
+            </div>
+        </div>
+    </div>
+    <header class="wrap header py-2">
+        <a href="index.html">
+            <h1 class="header__logo">Food Marco</h1>
+        </a>
+        <a href="#" class="header__burger  disBlock-table">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <nav class="header__nav">
+            <ul class="header__nav">
+                <li><a href="https://bit.ly/2Sg0Myf" target="_blank" class="h4">最新活動</a></li>
+                <li><a href="tutorial.html" class="h4">新手上路</a></li>
+                <li><a href="foodie.html" class="h4">成為分享家</a></li>
+                <li><a href="store.html" class="h4">合作餐廳</a></li>
+                <li><a href="business.html" class="h4">成為合作夥伴</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="header__space  disBlock-table"></div>
+    <div class="btn-fix b-info p-fixed scrollBtn" data-scrollName="Foodie">
+        <a href="#" class="h5 t-white t-strong" id="gtm-foodie-scrollDown-pcFix">立即體驗<i></i></a>
+    </div>
+    <!-- 固定Layout -->
+    <!-- foodieHero開始 -->
+    <section class="foodieHero" id="gtm-view-foodie-intro">
+        <div class="foodieHero__block wrap">
+            <h2 class="displayH1  t-center  t-underLine-primary">講真話 賺收入</h2>
+            <h5 class="t-left mt-2">我們打造全台首創「真實分享」賺收入的餐食平台，<br>
+                不審稿、不廣告、不置入是Food Marco對「真實」的守護，<br>
+                只要用真實食記成功影響美食客去餐廳消費，<br>
+                分享家就能賺到分潤，分潤收入無上限。<br>
+            </h5>
+            <div class="btn-md b-primary mt-2 cursor-pointer scrollBtn" data-scrollName="Calculator"
+                id="gtm-scroll-foodie-scrollCalculator">
+                <div class="d-flex-row">
+                    <h4 class="t-strong mr-2">計算收入</h4>
+                    <i class="icon-arrow"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- foodieCard開始 -->
+    <section class="foodieCard wrap" id="gtm-view-foodie-foodieCard">
+        <h2 class="t-bold mb-2 t-center">為什麼成為Food Marco分享家？</h2>
+        <h3 class="t-center mb-3 t-primary">暢所欲言說真話，還可以賺收入!</h3>
+        <div class="foodieCard__list">
+            <div class="card-rectangle" data-aos="fade-up" data-aos-duration="800">
+                <i style="background-image:url('img/p_foodie/car_1.jpg');"></i>
+                <h3 class="h3 t-primary t-strong">你可以講真話</h3>
+                <hr>
+                <h6 class="h6 t-muted t-center">你可以暢所欲言地分享用餐經驗。我們不審稿，
+                    尊重你的用餐心得。</h6>
+            </div>
+            <div class="card-rectangle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                <i style="background-image:url('img/p_foodie/car_2.jpg');"></i>
+                <h3 class="h3 t-primary t-strong">你可以賺分潤</h3>
+                <hr>
+                <h6 class="h6 t-muted t-center">有美食客因你的食記去用餐，你就可獲得美食客餐費的3%分潤。</h6>
+            </div>
+            <div class="card-rectangle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                <i style="background-image:url('img/p_foodie/car_3.jpg');"></i>
+                <h3 class="h3 t-primary t-strong">你有曝光機會</h3>
+                <hr>
+                <h6 class="h6 t-muted t-center">我們提供多元的曝光機會，讓你的食記被更多美食客看見。</h6>
+            </div>
+        </div>
+        <div class="question__link mt-4">
+            <a href="#" class="h6 t-muted scrollBtn" data-scrollName="Calculator" id="gtm-scroll-foodie-foodieCardScroll">可以賺多少？來試算看看！</a>
+        </div>
+    </section>
+
+    <!-- howEarn開始 -->
+    <section class="howEarn wrap" id="gtm-view-foodie-howEarn">
+        <h2 class="t-bold mb-6">如何開始賺收入？</h2>
+        <ul class="howEarnRow">
+            <li class="t-center howEarnRow__item">
+                <img src="img/p_foodie/howEarn_1.png" alt="下載APP">
+                <h5 class="t-primary">Step 1</h5>
+                <h3 class="t-bold">下載APP</h3>
+                <h5 class="t-dark">完成註冊綁定個人資料與付款方式</h5>
+            </li>
+            <li class="t-center howEarnRow__item">
+                <img src="img/p_foodie/howEarn_2.png" alt="選餐廳">
+                <h5 class="t-primary">Step 2</h5>
+                <h3 class="t-bold">選餐廳</h3>
+                <h5 class="t-dark">前往Food Marco合作餐廳用餐並用App結帳</h5>
+                <div class="question__link mt-2">
+                    <a href="store.html" class="h6 t-muted" id="gtm-engage-foodie-findStore">尋找餐廳</a>
+                </div>
+            </li>
+            <li class="t-center howEarnRow__item">
+                <img src="img/p_foodie/howEarn_3.png" alt="說真話">
+                <h5 class="t-primary">Step 3</h5>
+                <h3 class="t-bold">說真話</h3>
+                <h5 class="t-dark">於Food Marco App分享真實用餐經驗</h5>
+            </li>
+            <li class="t-center howEarnRow__item">
+                <img src="img/p_foodie/howEarn_4.png" alt="賺收入">
+                <h5 class="t-primary">Step 4</h5>
+                <h3 class="t-bold">賺收入</h3>
+                <h5 class="t-dark">影響別人認可你的食記，每個認可都是一筆收入！</h5>
+            </li>
+        </ul>
+        <div class="howEarn__notice mt-5">
+            <img src="img/symbol/howEarn_symbol.svg" class="mr-2">
+            <h5 class="t-primary">
+                每個認可皆是真實體驗，<br>美食客要去消費你分享的食記才能認可你喔！
+            </h5>
+        </div>
+    </section>
+
+    <!-- 計算機開始 -->
+    <section class="calculator p-relative b-linear-primary py-5 mt-5" id="scrollCalculator"  id="gtm-view-foodie-calculator">
+        <div class="wrap">
+            <img src="img/p_foodie/title.png" alt="試算我的Food Marco分潤收入">
+            <label class="calculatorToggle mt-3" id="gtm-engage-foodie-calculatorToggle">
+                <input type="checkbox" id="calculatorToggle">
+                <div class="calculatorToggle__back">
+                    <span class="calculatorToggle__label calculatorToggle__label--on h5 t-bold">以粉絲數試算</span>
+                    <span class="calculatorToggle__label h5 t-bold">以文章流量試算</span>
+                </div>
+            </label>
+            <div class="calculatorCountainer">
+                <!-- 粉絲數計算 -->
+                <div class="calculatorBox calculatorBox--active" id="calculatorFans">
+                    <ul class="calculatorBox__count">
+                        <li class="calculatorBox__row">
+                            <span>我有</span>
+                            <div class="number-input" id="gtm-engage-foodie-calculatorFans">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(100)"
+                                    class="minus" id=""></button>
+                                <input class="quantity" min="0" name="quantity" value="300" type="number"
+                                    id="calculatorFans-fans">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(100)"
+                                    class="plus" id=""></button>
+                            </div>
+                            <span>好友/粉絲</span>
+                        </li>
+                        <li class="calculatorBox__row">
+                            <span>分享方式</span>
+                            <select id="calculatorFans-share gtm-engage-foodie-calculatorFans">
+                                <option value="0.02">佛系經營(2%)</option>
+                                <option value="0.25">人緣很好(25%)</option>
+                                <option value="0.5" selected>到處分享(50%)</option>
+                                <option value="0.85">登高一呼(85%)</option>
+                            </select>
+                        </li>
+                        <li class="calculatorBox__row">
+                            <span>有</span>
+                            <span id="calculatorFans-approbatePeople">500</span>
+                            <span>人認可我的食記</span> 
+                            <a href="#" class="icon-exclamation openPop" data-pop="approbate" id="gtm-engage-foodie-calculatorApprobate"></a>
+                        </li>
+                        <li class="calculatorBox__row">
+                            <span>每個人一個月平均認可我</span>
+                            <div class="number-input"  id="gtm-engage-foodie-calculatorFans">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                                    class="minus"></button>
+                                <input class="quantity" min="1" name="quantity" value="2" type="number"
+                                    id="calculatorFans-approbateMonth">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                    class="plus"></button>
+                            </div>
+                            <span>次</span>
+                        </li>
+                        <li class="calculatorBox__row">
+                            <span>認可我的人平均消費</span>
+                            <span id="calculatorFans-consumeText">350</span>
+                            <span>元</span><a href="#" class="icon-exclamation openPop" data-pop="consumePrice"></a>
+                            <input class="range-slider" type="range" value="350" min="50" max="3000" step="50" id="calculatorFans-consume gtm-engage-foodie-calculatorFans" >
+                            <ul class="range-number">
+                                <li class="t-muted h6">50 元</li>
+                                <li class="t-muted h6">1,500 元</li>
+                                <li class="t-muted h6">3,000 元</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <img src="img/p_foodie/calculator_line.svg" class="calculatorCountainer__line">
+                    <div class="calculatorBox__results t-center">
+                        <h5 class="t-bold t-dark-primary">我的分潤年收入</h5>
+                        <div class="mt-2">
+                            <span class="h5 t-strong t-warning">NT$</span>
+                            <span class="h1 t-strong" id="calculatorFans-ans">3000</span>
+                        </div>
+                        <div class="mt-2">
+                            <!-- <span class="calculatorBox__results_text p t-dark-primary mr-1">對照</span> -->
+                            <span class="p t-dark-primary">比起每次業配僅有單人餐費，<br>在Food Marco的真實食記可以賺分潤無上限！</span>
+                        </div>
+                        <!-- <p class="t-muted mt-2">單位：新台幣</p> -->
+                    </div>
+                </div>
+                <!-- 文章流量計算 -->
+                <div class="calculatorBox" id="calculatorTraffic">
+                    <ul class="calculatorBox__count">
+                        <li class="calculatorBox__row">
+                            <span>每月發文</span>
+                            <div class="number-input" id="gtm-engage-foodie-calculatorTraffic">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(1)"
+                                    class="minus"></button>
+                                <input class="quantity" min="1" name="quantity" value="5" type="number"
+                                    id="calculatorTraffic-story">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(1)"
+                                    class="plus"></button>
+                            </div>
+                            <span>篇</span>
+                        </li>
+                        <li class="calculatorBox__row">
+                            <span>每篇食記平均</span>
+                            <div class="number-input" id="gtm-engage-foodie-calculatorTraffic">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(250)"
+                                    class="minus"></button>
+                                <input class="quantity" min="250" name="quantity" value="5000" type="number"
+                                    id="calculatorTraffic-traffic">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(250)"
+                                    class="plus"></button>
+                            </div>
+                            <span>瀏覽量</span>
+                        </li>
+                        <li class="calculatorBox__row">
+                            <span>分享方式</span>
+                            <select id="calculatorTraffic-share gtm-engage-foodie-calculatorTraffic">
+                                <option value="0.02">自然發酵(2%)</option>
+                                <option value="0.08" selected>積極轉發(8%)</option>
+                                <option value="0.2">賺文高手(20%)</option>
+                            </select>
+                        </li>
+                        <li class="calculatorBox__row">
+                            <span>預計</span>
+                            <span id="calculatorTraffic-save">1000</span>
+                            <span>位美食客收藏我的食記</span>
+                        </li>
+                        <li class="calculatorBox__row">
+                            <span>我的食記認可率約</span>
+                            <select id="calculatorTraffic-approbate gtm-engage-foodie-calculatorTraffic">
+                                <option value="0.05">2%</option>
+                                <option value="0.08" selected>8%</option>
+                                <option value="0.2">20%</option>
+                            </select>
+                            <a href="#" class="ml-2 icon-exclamation openPop" data-pop="approbateMonth"></a>
+                        </li>
+                        <li class="calculatorBox__row">
+                            <span>總共有</span>
+                            <span id="calculatorTraffic-consumeMonth">2</span>
+                            <span>位美食客認可我</span>
+                        </li>
+                        <li class="calculatorBox__row">
+                            <span>每位美食客一個月平均認可我</span>
+                            <div class="number-input" id="gtm-engage-foodie-calculatorTraffic">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                                    class="minus"></button>
+                                <input class="quantity" min="1" name="quantity" value="2" type="number"
+                                id="calculatorTraffic-approbateMonth">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                    class="plus"></button>
+                            </div>
+                            <span>次</span>
+                        </li>
+                        <li class="calculatorBox__row">
+                            <span>每次消費平均客單價</span>
+                            <span id="calculatorTraffic-consumeText">350</span>
+                            <span>元</span>                            
+                            <a href="#" class="icon-exclamation openPop" data-pop="consumePrice"></a>
+                            <input class="range-slider" type="range" value="350" min="50" max="3000" step="50" id="calculatorTraffic-consumePrice gtm-engage-foodie-calculatorTraffic">
+                            <ul class="range-number">
+                                <li class="t-muted h6">50 元</li>
+                                <li class="t-muted h6">1,500 元</li>
+                                <li class="t-muted h6">3,000 元</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <img src="img/p_foodie/calculator_line.svg" alt="" class="calculatorCountainer__line">
+                    <div class="calculatorBox__results t-center">
+                        <h5 class="t-bold t-dark-primary">我的分潤年收入</h5>
+                        <div class="mt-2">
+                            <span class="h5 t-strong t-warning">NT$</span>
+                            <span class="h1 t-strong" id="calculatorTraffic-ans">3000</span>
+                        </div>
+                        <div class="mt-2">
+                            <!-- <span class="calculatorBox__results_text p t-dark-primary mr-1">對照</span> -->
+                            <span class="p t-dark-primary">比起每次業配僅有單人餐費，<br>在Food Marco的真實食記可以賺分潤無上限！</span>
+                        </div>
+                        <!-- <p class="t-muted mt-2">單位：新台幣</p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- foodieQuestion開始 -->
+    <section class="question wrap"  id="gtm-view-foodie-question">
+        <div class="title my-5">
+            <h2 class="h2">常見問題</h2>
+            <h6 class="en_text">Q&A</h6>
+        </div>
+        <ul class="question__list">
+            <li>
+                <a href="#" class="h5 t-black t-bold"><span class="t-primary h5 mr-1">Q1</span>
+                    分享家如何賺取分潤？
+                </a>
+                <div class="question__list_answer">
+                    <h6 class="h6">只要有美食客因為分享家的真實食記前往餐廳消費，分享家就能獲得美食客消費金額的3%分潤。</h6>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="h5 t-black t-bold"><span class="t-primary h5 mr-1">Q2</span>
+                    分享家如何知道可以賺到多少分潤？
+                </a>
+                <div class="question__list_answer">
+                    <h6 class="h6">當分享家獲得分潤後，Food Marco平台每週會統計分潤總額，並於APP內通知，分享家可於Food Marco APP內（設定→我的M幣）查詢明細。</h6>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="h5 t-black t-bold"><span class="t-primary h5 mr-1">Q3</span>
+                    如果沒有得到認可就賺不到分潤嗎？
+                </a>
+                <div class="question__list_answer">
+                    <h6 class="h6">是的，建議可以將食記分享給粉絲或是親朋好友，邀請大家一起來認可真實分享，一起打造真實分享的美食平台。</h6>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="h5 t-black t-bold"><span class="t-primary h5 mr-1">Q4</span>
+                    分潤是現金嗎? 要怎麼領？
+                </a>
+                <div class="question__list_answer">
+                    <h6 class="h6">分潤會以「有償M幣」形式存於Food Marco APP內 (M幣：新台幣 ＝ 1：1)，有償M幣是可以提領成現金的，每次提領會收取單筆手續費。</h6>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="h5 t-black t-bold"><span class="t-primary h5 mr-1">Q5</span>
+                    分享家在Food Marco撰寫食記內容需要被審核嗎？有沒有任何限制？
+                </a>
+                <div class="question__list_answer">
+                    <h6 class="h6">Food Marco致力於追求真實的用餐體驗，平台食記內容皆自由撰寫，無需經過審稿。
+                    </h6>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="h5 t-black t-bold"><span class="t-primary h5 mr-1">Q6</span>
+                    Food Marco食記會有什麼樣的曝光機會？
+                </a>
+                <div class="question__list_answer">
+                    <h6 class="h6">Food Marco 會精選真實食記推播給APP用戶。而認可數越高的食記，越有機會出現在APP首頁喔。另外Food Marco也會在社群平台推廣分享家的真實食記，讓更多人看到這些真實食記。
+                    </h6>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="h5 t-black t-bold"><span class="t-primary h5 mr-1">Q7</span>
+                    分享家可以同步發布食記到自己經營社群/部落格與Food Marco嗎？
+                </a>
+                <div class="question__list_answer">
+                    <h6 class="h6"> Food Marco沒有限制真實食記只能發布在Food Marco，只要是「真實分享」都能在Food Marco分享，但僅有在Food Marco平台可以賺到分潤無上限。另外，每篇食記都有「分享連結」，可將真實食記分享給粉絲或親朋友，獲得更多的認可。</h6>
+                </div>
+            </li>
+        </ul>
+        <div class="question__link mt-2">
+            <a href="https://foodmarco.zendesk.com/hc/zh-tw" class="h6 t-muted"
+                id="gtm-foodie-question">找不到想問的問題嗎？前往我們的問答平台</a>
+        </div>
+    </section>
+
+    <!-- Action開始 -->
+    <section class="action action--waveBg py-6  mt-7" id='scrollFoodie'  id="gtm-view-foodie-action">
+        <div class="wrap p-relative">
+            <div class="foodieAction action__title t-center" data-aos="fade-zoom-in" data-aos-duration="1500" data-aos-once="true">
+                <h2 class="h1 t-primary t-strong">一起講真話賺收入</h2>
+                <h4 class="h4 mt-2">註冊領取真實分享感謝金$50</h4>
+                <div class="action__download_row">
+                    <a href="https://play.google.com/store/apps/details?id=com.foodmarco.resapp"
+                        class="action__download_row--google" target="_blank"><img src="img/footer/GooglePlayBadge.png"
+                            alt="GooglePlay下載" id="gtm-foodie-goolgePlay-bottom"></a>
+                    <a href="https://apps.apple.com/tw/app/food-marco-%E6%89%BE%E9%A4%90%E5%BB%B3-%E5%AF%AB%E9%A3%9F%E8%A8%98-%E8%B3%BA%E5%9B%9E%E9%A5%8B/id1506563845"
+                        class="action__download_row--apple" target="_blank"><img src="img/footer/AppleStoreBadge.png"
+                            alt="MacAppStore" id="gtm-foodie-appleStore-bottom"></a>
+                </div>
+            </div>
+            <div class="action__download" data-aos="fade-zoom-in" data-aos-duration="1500" data-aos-delay="300"
+                data-aos-once="true">
+                <h4 class="h4 mt-2 t-center">看看其他分享家的真實食記</h4>
+                <a href="https://www.foodmarco.com/"
+                    class="d-block t-strong t-black btn-lg-primary p-relative my-2 t-black" target="_blank"
+                    id="gtm-foodie-web-bottom">立即體驗</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer b-primary">
+        <div class="wrap">
+            <div class="footer__left mb-3">
+                <h2 class="h4 t-strong">馬可波羅科技股份有限公司</h2>
+                <ul class="footer__left_map mt-1">
+                    <li><a href="https://foodmarco.zendesk.com/hc/zh-tw/articles/360052183052-Food-Marco-%E9%9A%B1%E7%A7%81%E6%AC%8A%E6%94%BF%E7%AD%96"
+                            target="_blank">隱私權政策</a></li>
+                    <li><a href="https://marcopolo-corp.com/index.html" target="_blank">關於我們</a></li>
+                    <li><a href="https://foodmarco.zendesk.com/hc/zh-tw/articles/360052183072-Food-Marco%E6%9C%83%E5%93%A1%E6%9C%8D%E5%8B%99%E6%A2%9D%E6%AC%BE"
+                            target="_blank">服務條款</a></li>
+                    <li><a href="https://www.104.com.tw/company/1a2x6bl0r7" target="_blank">人才招募</a></li>
+                    <li><a href="business.html">店家專區</a></li>
+                    <li><a href="https://tw.foodmarco.com/advertise/adPlane/index.html" target="_blank">全通路行銷方案</a></li>
+                </ul>
+            </div>
+            <div class="footer__right mb-3">
+                <div>
+                    <div class="footer__right_copyright">
+                        <span class="span t-white">© 2020 Marco Technology LTD. All Rights Reserved</span>
+                    </div>
+                    <div class="footer__right_mail mt-1">
+                        <i class="icon-mail"></i>
+                        <span class="span t-white t-strong">cs@foodmarco.com</span>
+                    </div>
+                </div>
+                <div class="footer__right_sns ml-2">
+                    <a href="https://www.facebook.com/Food-Marco-109774030939135/" class="footer__right_sns--fb"
+                        target="_blank"><i class="icon-fb"></i></a>
+                    <!-- <a href="https://www.facebook.com/Food-Marco-109774030939135/" class="footer__right_sns--ig" target="_blank"><i class="icon-ig"></i></a> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="js/swiper.js"></script>
+    <script type="text/javascript" src="js/aos.js"></script>
+    <script type="text/javascript" src="js/foodie.js"></script>
+    <script src="js/pop_lightBox.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- Start of foodmarco Zendesk Widget script -->
+    <!-- <script id="ze-snippet"
+        src="https://static.zdassets.com/ekr/snippet.js?key=74b2836f-0573-46c6-bacb-e0c7e7ee7bf8"> </script> -->
+    <!-- End of foodmarco Zendesk Widget script -->
+  <!-- Messenger 洽談外掛程式 Code -->
+  <div id="fb-root"></div>
+
+  <!-- Your 洽談外掛程式 code -->
+  <div id="fb-customer-chat" class="fb-customerchat">
+  </div>
+
+  <script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "109774030939135");
+    chatbox.setAttribute("attribution", "biz_inbox");
+
+    window.fbAsyncInit = function() {
+      FB.init({
+        xfbml            : true,
+        version          : 'v11.0'
+      });
+    };
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+</body>
+
+</html>
