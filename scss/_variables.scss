@@ -1,0 +1,74 @@
+/* 
+	2020.12.30
+	variables _ 變數
+*/
+
+
+/*------------------------------------*\
+ $COLOR
+\*------------------------------------*/
+$primary: #FABE00;
+$dark-primary: #6E5300;
+$secondary-primary: #FDEEBE;
+$warning: #F05A32;
+$info: #00B4C8;
+$black: #000;
+$white: #fff;
+
+$dark: #333;
+$muted: #979797;
+$light: #d9d9d9;
+$body: #F9F8F5;
+
+$mr-primary: #1E3D72;
+$mr-info: #C9DDFF;
+$mr-danger: #FF1D66;
+
+
+
+
+
+/*------------------------------------*\
+ $LINER
+\*------------------------------------*/
+$linear-primary: linear-gradient(180deg, rgba(250,190,0,0.65) 0%, #FABE00 100%);
+
+
+
+
+
+/*------------------------------------*\
+ $WIDTH
+\*------------------------------------*/
+$w-pc: 1024px;
+$w-pad: 801px;
+$w-table: 720px;
+$w-mb: 460px;
+
+$spacer: 5px;
+
+
+
+
+
+/*------------------------------------*\
+ $FONT-WEIGHT
+\*------------------------------------*/
+$t-light: 300;
+$t-normal: 400;
+$t-bold: 500;
+$t-strong: 700;
+
+
+
+
+
+/*------------------------------------*\
+ $TRANSITION
+\*------------------------------------*/
+$easeInOutSine: cubic-bezier(0.37, 0, 0.63, 1);
+$easeOutCubic: cubic-bezier(0.33, 1, 0.68, 1);
+$easeOutQuad: cubic-bezier(0.5, 1, 0.89, 1);
+$easeOutQuart: cubic-bezier(0.25, 1, 0.5, 1);
+$easeInOutCirc: cubic-bezier(0.85, 0, 0.15, 1);
+

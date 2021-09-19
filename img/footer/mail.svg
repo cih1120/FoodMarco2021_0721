@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="15px" viewBox="0 0 23 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>footer/mail</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pc/footer" transform="translate(-756.000000, -82.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="footer/mail" transform="translate(737.000000, 73.000000)">
+                <g transform="translate(30.500000, 16.500000) scale(-1, 1) translate(-30.500000, -16.500000) translate(19.000000, 9.000000)" id="Path">
+                    <polygon points="15.3333333 7.59692705 23 12.1875 23 2.8125"></polygon>
+                    <polygon points="0 2.8125 0 12.1875 7.66666667 7.59692705"></polygon>
+                    <path d="M21.6003764,0 L1.39962359,0 C0.679611041,0 0.108218319,0.457227139 0,1.04596853 L11.5,7.5 L23,1.04596853 C22.8917817,0.457227139 22.320389,0 21.6003764,0 Z"></path>
+                    <path d="M13.9391315,8.43886293 L11.8969001,9.70911215 C11.7756652,9.78407321 11.6385542,9.82087227 11.5,9.82087227 C11.3614458,9.82087227 11.2243348,9.78407321 11.1030999,9.70911215 L9.06086847,8.4375 L0,13.8496885 C0.111132028,14.4970794 0.679781627,15 1.39708835,15 L21.6029116,15 C22.3202184,15 22.888868,14.4970794 23,13.8496885 L13.9391315,8.43886293 Z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,228 @@
+/* 
+	2020.12.30
+	Layout _ 版面
+*/
+* {
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden !important;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrap {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.wrap-fluid {
+  width: 100%;
+}
+
+.header {
+  @include df_center();
+  justify-content: space-between;
+  @include rwd($w-table) {
+    width: 100%;
+    flex-wrap: nowrap;
+    position: fixed;
+    top: 34px;
+    background-color: $primary;
+    z-index: 99;
+    box-shadow: 0px 0px 5px rgba($dark-primary, 0.4);
+    &.noTop {
+      top: 0px;
+    }
+  }
+
+  &__banner {
+    width: 100%;
+    padding: 5px 0;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    color: $dark-primary;
+    background-color: $secondary-primary;
+    .wrap {
+      @include df_center();
+      justify-content: space-between;
+    }
+    &_download {
+      position: relative;
+      padding: 5px 15px;
+      border: 1px solid $dark-primary;
+      border-radius: 15px;
+      a {
+        @include df_center();
+        @include size(100%);
+      }
+      p {
+        color: $dark-primary;
+        margin-right: 3px;
+        font-weight: $t-bold;
+      }
+    }
+  }
+  &__burger {
+    margin-right: 5%;
+    padding: 8px;
+    z-index: 999;
+    border: 3px solid $black;
+    border-radius: 50%;
+    @include transition-fast;
+    span {
+      @include size(18px, 3px);
+      display: block;
+      margin-bottom: 4px;
+      background-color: $black;
+      border-radius: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &--active {
+      border: 3px solid $black;
+      span {
+        @include transition-fast;
+        transform: translateY(0) rotate(0deg);
+        background-color: $black;
+        &:nth-child(1) {
+          transform: translateY(7px) rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          transform: translateY(-7px) rotate(-45deg);
+        }
+      }
+    }
+  }
+  &__logo {
+    @include size(177px, 108px);
+    @include bgimg("../img/logo/yellow.svg");
+    margin-top: 20px;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+    @include rwd($w-table) {
+      @include size(239px, 33px);
+      @include bgimg("../img/logo/hz_black.svg");
+      margin-top: 0;
+      margin-left: 5%;
+    }
+  }
+  &__nav {
+    @include df_center();
+    @include rwd($w-table) {
+      display: none;
+    }
+    a {
+      position: relative;
+      display: block;
+      margin: 5px 18px;
+      padding: 2px 5px;
+      color: $black;
+      font-weight: $t-bold;
+      overflow: hidden;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        left: -100%;
+        top: 0;
+        @include size(100%);
+        z-index: -1;
+        background-color: $primary;
+        @include transition-middle();
+      }
+      &:hover {
+        &:after {
+          left: 0;
+        }
+      }
+    }
+  }
+  // 手機版本選單
+  @include rwd($w-table) {
+    &__nav {
+      position: absolute;
+      @include df_center(column);
+      display: flex;
+      align-items: flex-start;
+      width: 100%;
+      top: 0;
+      right: -100%;
+      padding: 55px 36px 80px 36px;
+      background-color: $primary;
+      @include transition-middle;
+      li {
+        width: 100%;
+        border-bottom: 1px solid #fff;
+        &:last-child {
+          border-bottom: 0px;
+        }
+      }
+      a {
+        color: $black;
+        padding: 20px 10px;
+      }
+      &--active {
+        right: 0;
+      }
+    }
+  }
+  // 讓第一cut不要被遮住
+  &__space {
+    margin-top: 50px;
+  }
+}
+
+.footer {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  .wrap {
+    @include df_center();
+    justify-content: space-between;
+  }
+  &__left {
+    &_map {
+      @include df_center();
+      justify-content: flex-start;
+      a {
+        margin-right: 15px;
+        color: $black;
+      }
+    }
+  }
+  &__right {
+    @include df_center();
+    &_mail {
+      display: inline-block;
+      padding: 4px 13px;
+      border: 2px solid $white;
+      border-radius: 16px;
+    }
+    &_copyright {
+      opacity: 0.5;
+    }
+    @include rwd($w-table) {
+      justify-content: flex-start;
+      &_sns {
+        margin-top: 10px;
+      }
+    }
+  }
+}

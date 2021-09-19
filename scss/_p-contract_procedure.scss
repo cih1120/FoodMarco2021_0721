@@ -1,0 +1,174 @@
+/* 
+	2021.05.19
+	contractProcedure _ 服務費用與簽約流程說明
+*/
+.contractHero {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 20px;
+  padding: 80px 5px 150px 0;
+  background-color: $primary;
+  .wrap {
+    position: relative;
+    &::after {
+      content: "";
+      @include size(calc(100% + 150px));
+      @include bgimg("../img/p_contract_procedure/hero.png");
+      background-size: contain;
+      position: absolute;
+      right: -40%;
+      bottom: -150px;
+      @include rwd(660px) {
+        display: none;
+      }
+    }
+  }
+  &__block {
+    @include rwd($w-table) {
+      margin-top: 30px;
+    }
+    @include rwd(333px) {
+      .displayH1 {
+        font-size: 2.3rem;
+      }
+    }
+  }
+}
+
+/*   procedure開始   */
+.procedureRow {
+  @include df_center();
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  text-align: center;
+  @include rwd($w-table) {
+    flex-direction: column;
+    &__arrow {
+      margin: 20px 0;
+      transform: rotate(90deg);
+    }
+  }
+  &__item {
+    @include df_center(column);
+    position: relative;
+    &--icon {
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      @include bgimg("../symbol/arrow_yellow.svg");
+      @include size(37px, 27px);
+    }
+  }
+}
+
+/*   areaComfirm開始   */
+.lightBox {
+  position: fixed;
+  width: 70%;
+  max-width: 600px;
+  left: 50%;
+  top: 50%;
+  // transform: translateX(-50%) translateY(-50%);
+  background-color: $white;
+  border-radius: 24px;
+  padding: 70px 45px;
+  &--areacomfirm {
+    padding: 70px 45px 180px 45px;
+    background-image: url(../img/p_contract_procedure/areaComfirm.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 180px;
+  }
+  .advisoryClose {
+    right: 25px;
+    top: 45px;
+  }
+  &__content {
+    @include size(100%);
+    &--hide {
+      display: none;
+    }
+  }
+  .advisory {
+    margin-top: 0;
+  }
+  .action__download a {
+    width: 90%;
+    padding: 28px 10px;
+  }
+  @include rwd($w-table) {
+    width: 80%;
+    .action__download a {
+      width: 100%;
+    }
+  }
+  @include rwd($w-mb) {
+    width: 90%;
+    padding: 60px 10px 100px 10px;
+    background-size: 120px;
+  }
+  @include rwd(350px) {
+    width: 95%;
+    padding: 50px 5px 80px 5px;
+    background-size: 80px;
+    .advisoryClose {
+      right: 5px;
+      top: 25px;
+    }
+  }
+}
+
+.overray {
+  pointer-events: none;
+  @include size(100%);
+  background-color: rgba($black, 0.5);
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: all 0.7s $easeOutCubic;
+  .lightBox {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-30%);
+    transition: all 0.6s $easeOutQuart;
+    transition-delay: 0.2s;
+  }
+}
+.lightBoxOpen {
+  pointer-events: auto !important;
+  opacity: 1 !important;
+  .lightBox {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+//cookie打開視窗
+.cookieComfirm {
+  &__option {
+    display: block;
+    padding: 20px;
+  }
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    @include rwd($w-table) {
+      flex-direction: column;
+      align-items: center;
+    }
+    img {
+      width: 60%;
+      margin-bottom: 10px;
+      margin-right: 10px;
+    }
+  }
+}

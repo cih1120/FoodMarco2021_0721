@@ -1,0 +1,595 @@
+/* 
+	2020.12.30
+	utils _ 通用類別
+*/
+
+/*------------------------------------*\
+ $FONT-COLOR
+\*------------------------------------*/
+.t-primary {
+  color: $primary;
+}
+.t-dark-primary {
+  color: $dark-primary;
+}
+.t-secondary-primary {
+  color: $secondary-primary;
+}
+.t-warning {
+  color: $warning;
+}
+.t-info {
+  color: $info;
+}
+.t-white {
+  color: $white;
+}
+.t-black {
+  color: $black;
+}
+
+.t-dark {
+  color: $dark;
+}
+.t-muted {
+  color: $muted;
+}
+.t-body {
+  color: $body;
+}
+
+.t-mr-primary {
+  color: $mr-primary;
+}
+.t-mr-info {
+  color: $mr-info;
+}
+.t-mr-danger {
+  color: $mr-danger;
+}
+
+/*------------------------------------*\
+ $TEXT-SHADOW
+\*------------------------------------*/
+.t-shadow-black {
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/*------------------------------------*\
+ $BACKGROUND-COLOR
+\*------------------------------------*/
+.b-primary {
+  background-color: $primary;
+}
+.b-dark-primary {
+  background-color: $dark-primary;
+}
+.b-secondary-primary {
+  background-color: $secondary-primary;
+}
+.b-warning {
+  background-color: $warning;
+}
+.b-info {
+  background-color: $info;
+}
+.b-black {
+  background-color: $black;
+}
+.b-white {
+  background-color: $white;
+}
+
+.b-dark {
+  background-color: $dark;
+}
+.b-muted {
+  background-color: $muted;
+}
+.b-light {
+  background-color: $light;
+}
+.b-body {
+  background-color: $body;
+}
+
+.b-mr-primary {
+  background-color: $mr-primary;
+}
+.b-mr-info {
+  background-color: $mr-info;
+}
+.b-mr-danger {
+  background-color: $mr-danger;
+}
+
+.b-linear-primary {
+  background-image: $linear-primary;
+}
+
+/*------------------------------------*\
+ $TEXT-ALIGN
+\*------------------------------------*/
+.t-left {
+  text-align: left;
+}
+.t-center {
+  text-align: center;
+}
+.t-right {
+  text-align: right;
+}
+
+/*------------------------------------*\
+ $TEXT-UNDERLINE
+\*------------------------------------*/
+.t-underline {
+  text-decoration: underline;
+}
+
+/*------------------------------------*\
+ $DISPLAY
+\*------------------------------------*/
+.d-block {
+  display: block;
+}
+.d-none {
+  display: none;
+}
+.d-inline {
+  display: inline;
+}
+.d-inline-block {
+  display: inline-block;
+}
+.d-flex-row {
+  @include df_center();
+}
+.d-flex-row-flexStart {
+  @include df_center();
+  justify-content: flex-start;
+}
+.d-flex-row-spaceBetween {
+  @include df_center();
+  justify-content: space-between;
+}
+.d-flex-column {
+  @include df_center(column);
+}
+.d-flex-column-flexStart {
+  @include df_center(column);
+  justify-content: flex-start;
+}
+.d-flex-column-spaceBetween {
+  @include df_center(column);
+  justify-content: space-between;
+}
+
+/*------------------------------------*\
+ $TEXT-WEIGHT
+\*------------------------------------*/
+.t-light {
+  font-weight: $t-light;
+}
+.t-normal {
+  font-weight: $t-normal;
+}
+.t-bold {
+  font-weight: $t-bold;
+}
+.t-strong {
+  font-weight: $t-strong;
+}
+
+/*------------------------------------*\
+ $DISPLAY_RWD
+\*------------------------------------*/
+.disNone-pc {
+  @include disNone-pc();
+}
+.disNone-pad {
+  @include disNone-pad();
+}
+
+.disNone-table {
+  @include disNone-table();
+}
+
+.disNone-mb {
+  @include disNone-mb();
+}
+
+.disBlock-pc {
+  @include disBlock-pc();
+}
+
+.disBlock-pad {
+  @include disBlock-pad();
+}
+
+.disBlock-table {
+  @include disBlock-table();
+}
+
+.disBlock-mb {
+  @include disBlock-mb();
+}
+
+/*------------------------------------*\
+ $SPACING
+\*------------------------------------*/
+.m-1 {
+  margin: $spacer;
+}
+.m-2 {
+  margin: $spacer * 2;
+}
+.m-3 {
+  margin: $spacer * 4;
+}
+.m-4 {
+  margin: $spacer * 6;
+}
+.m-5 {
+  margin: $spacer * 8;
+}
+.m-6 {
+  margin: $spacer * 10;
+}
+
+.mt-1 {
+  margin-top: $spacer;
+}
+.mt-2 {
+  margin-top: $spacer * 2;
+}
+.mt-3 {
+  margin-top: $spacer * 4;
+}
+.mt-4 {
+  margin-top: $spacer * 6;
+}
+.mt-5 {
+  margin-top: $spacer * 8;
+}
+.mt-6 {
+  margin-top: $spacer * 10;
+}
+.mt-7 {
+  margin-top: $spacer * 12;
+}
+.mt-8 {
+  margin-top: $spacer * 14;
+}
+
+.mt-n1 {
+  margin-top: -$spacer;
+}
+.mt-n2 {
+  margin-top: -$spacer * 2;
+}
+.mt-n3 {
+  margin-top: -$spacer * 4;
+}
+.mt-n4 {
+  margin-top: -$spacer * 6;
+}
+.mt-n5 {
+  margin-top: -$spacer * 8;
+}
+.mt-n6 {
+  margin-top: -$spacer * 10;
+}
+
+.mr-1 {
+  margin-right: $spacer;
+}
+.mr-2 {
+  margin-right: $spacer * 2;
+}
+.mr-3 {
+  margin-right: $spacer * 4;
+}
+.mr-4 {
+  margin-right: $spacer * 6;
+}
+.mr-5 {
+  margin-right: $spacer * 8;
+}
+.mr-6 {
+  margin-right: $spacer * 10;
+}
+
+.mb-1 {
+  margin-bottom: $spacer;
+}
+.mb-2 {
+  margin-bottom: $spacer * 2;
+}
+.mb-3 {
+  margin-bottom: $spacer * 4;
+}
+.mb-4 {
+  margin-bottom: $spacer * 6;
+}
+.mb-5 {
+  margin-bottom: $spacer * 8;
+}
+.mb-6 {
+  margin-bottom: $spacer * 10;
+}
+.mb-7 {
+  margin-bottom: $spacer * 12;
+}
+
+.ml-1 {
+  margin-left: $spacer;
+}
+.ml-2 {
+  margin-left: $spacer * 2;
+}
+.ml-3 {
+  margin-left: $spacer * 4;
+}
+.ml-4 {
+  margin-left: $spacer * 6;
+}
+.ml-5 {
+  margin-left: $spacer * 8;
+}
+.ml-6 {
+  margin-left: $spacer * 10;
+}
+
+.my-1 {
+  margin: $spacer 0;
+}
+.my-2 {
+  margin: $spacer * 2 0;
+}
+.my-3 {
+  margin: $spacer * 4 0;
+}
+.my-4 {
+  margin: $spacer * 6 0;
+}
+.my-5 {
+  margin: $spacer * 8 0;
+}
+.my-6 {
+  margin: $spacer * 10 0;
+}
+.my-7 {
+  margin: $spacer * 12 0;
+}
+
+.p-1 {
+  padding: $spacer;
+}
+.p-2 {
+  padding: $spacer * 2;
+}
+.p-3 {
+  padding: $spacer * 4;
+}
+.p-4 {
+  padding: $spacer * 6;
+}
+.p-5 {
+  padding: $spacer * 8;
+}
+.p-6 {
+  padding: $spacer * 10;
+}
+
+.pl-1 {
+  padding-left: $spacer;
+}
+.pl-2 {
+  padding-left: $spacer * 2;
+}
+.pl-3 {
+  padding-left: $spacer * 4;
+}
+.pl-4 {
+  padding-left: $spacer * 6;
+}
+.pl-5 {
+  padding-left: $spacer * 8;
+}
+.pl-6 {
+  padding-left: $spacer * 10;
+}
+
+.pt-1 {
+  padding-top: $spacer;
+}
+.pt-2 {
+  padding-top: $spacer * 2;
+}
+.pt-3 {
+  padding-top: $spacer * 4;
+}
+.pt-4 {
+  padding-top: $spacer * 6;
+}
+.pt-5 {
+  padding-top: $spacer * 8;
+}
+.pt-6 {
+  padding-top: $spacer * 10;
+}
+
+.pb-1 {
+  padding-bottom: $spacer;
+}
+.pb-2 {
+  padding-bottom: $spacer * 2;
+}
+.pb-3 {
+  padding-bottom: $spacer * 4;
+}
+.pb-4 {
+  padding-bottom: $spacer * 6;
+}
+.pb-5 {
+  padding-bottom: $spacer * 8;
+}
+.pb-6 {
+  padding-bottom: $spacer * 10;
+}
+.pb-7 {
+  padding-bottom: $spacer * 12;
+}
+
+.px-1 {
+  padding-left: $spacer;
+  padding-right: $spacer;
+}
+.px-2 {
+  padding-left: $spacer * 2;
+  padding-right: $spacer * 2;
+}
+.px-3 {
+  padding-left: $spacer * 4;
+  padding-right: $spacer * 4;
+}
+.px-4 {
+  padding-left: $spacer * 6;
+  padding-right: $spacer * 6;
+}
+.px-5 {
+  padding-left: $spacer * 8;
+  padding-right: $spacer * 8;
+}
+.px-6 {
+  padding-left: $spacer * 10;
+  padding-right: $spacer * 10;
+}
+
+.py-1 {
+  padding-top: $spacer;
+  padding-bottom: $spacer;
+}
+.py-2 {
+  padding-top: $spacer * 2;
+  padding-bottom: $spacer * 2;
+}
+.py-3 {
+  padding-top: $spacer * 4;
+  padding-bottom: $spacer * 4;
+}
+.py-4 {
+  padding-top: $spacer * 6;
+  padding-bottom: $spacer * 6;
+}
+.py-5 {
+  padding-top: $spacer * 8;
+  padding-bottom: $spacer * 8;
+}
+.py-6 {
+  padding-top: $spacer * 10;
+  padding-bottom: $spacer * 10;
+}
+.py-7 {
+  padding-top: $spacer * 12;
+  padding-bottom: $spacer * 12;
+}
+.py-8 {
+  padding-top: $spacer * 14;
+  padding-bottom: $spacer * 14;
+}
+
+/*------------------------------------*\
+ $CURSOR
+\*------------------------------------*/
+.cursor-auto {
+  cursor: auto;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.cursor-false {
+  cursor: not-allowed;
+}
+
+/*------------------------------------*\
+ $TRANSTION
+\*------------------------------------*/
+.transition-fast {
+  @include transition-fast();
+}
+.transition-middle {
+  @include transition-middle();
+}
+.transition-slow {
+  @include transition-slow();
+}
+
+/*------------------------------------*\
+ $POSITION
+\*------------------------------------*/
+.p-static {
+  position: static;
+}
+.p-absolute {
+  position: absolute;
+}
+.p-relative {
+  position: relative;
+}
+.p-fixed {
+  position: fixed;
+}
+.p-sticky {
+  position: sticky;
+}
+
+/*------------------------------------*\
+ $ICON
+\*------------------------------------*/
+.icon-arrow {
+  display: inline-block;
+  @include bgimg("../img/symbol/icon-black.svg");
+  @include size(5px, 10px);
+}
+.icon-mail {
+  display: inline-block;
+  @include bgimg("../img/footer/mail.svg");
+  @include size(23px, 15px);
+}
+.icon-fb {
+  display: inline-block;
+  @include bgimg("../img/footer/fb.svg");
+  @include size(60px);
+}
+.icon-ig {
+  display: inline-block;
+  @include bgimg("../img/footer/ins.svg");
+  @include size(60px);
+}
+.icon-star {
+  display: inline-block;
+  @include bgimg("../img/symbol/star_yellow.svg");
+  @include size(1rem);
+}
+.icon-exclamation {
+  display: inline-block;
+  @include bgimg("../img/symbol/howEarn_symbol.svg");
+  @include size(1rem);
+}
+
+/*------------------------------------*\
+ $RADIUS
+\*------------------------------------*/
+.radius-circle {
+  border-radius: 50%;
+}
+
+.radius-3 {
+  border-radius: 3px;
+}
+
+.is-sticky {
+  z-index: 10 !important;
+}

@@ -1,0 +1,140 @@
+/* 
+	2020.12.30
+	advisory _ 諮詢專人POP
+*/
+.popOpen {
+  opacity: 1 !important;
+  background-color: $primary !important;
+  transform: translateX(0%) !important;
+  .advisoryContent {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.noScroll {
+  overflow: hidden !important;
+}
+/*   pop內容   */
+.advisoryPop {
+  padding: 25px 0;
+  overflow-y: scroll;
+  @include df_center();
+  @include size(100%);
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  // background-color: $primary;
+  background-color: #fff;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.6s $easeOutCubic;
+}
+.advisoryContent {
+  position: relative;
+  width: 60%;
+  max-width: 1024px;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.5s $easeOutCubic;
+  transition-delay: 0.6s;
+  @include rwd($w-pad) {
+    width: 80%;
+  }
+  @include rwd($w-table) {
+    width: 90%;
+  }
+}
+.advisoryForm {
+  @include df_center();
+  justify-content: space-between;
+  align-items: flex-start;
+  @include rwd($w-mb) {
+    flex-direction: column;
+  }
+  &__left,
+  &__right {
+    width: 45%;
+    @include rwd($w-mb) {
+      width: 100%;
+    }
+  }
+  &__box {
+    position: relative;
+    margin-top: 10px;
+    @include df_center(column);
+    align-items: flex-start;
+    input,
+    select,
+    textarea {
+      font-size: 1.5rem;
+      padding: 10px;
+      height: 58px;
+      background: rgba($white, 0.19);
+      border: 1px solid $white;
+      border-radius: 5px;
+      &::placeholder {
+        font-size: 1rem;
+        color: $dark;
+        opacity: 1; /* Firefox */
+      }
+
+      &:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        font-size: 1rem;
+        color: $dark;
+      }
+
+      &::-ms-input-placeholder {
+        font-size: 1rem;
+        color: $dark;
+      }
+    }
+    &--required {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+  input,
+  select,
+  textarea {
+    width: 100%;
+  }
+  textarea {
+    height: 145px;
+  }
+  input[type="submit"] {
+    margin-top: 54px;
+    padding: 15px 20px;
+    background-color: $black;
+    color: $white;
+    border: 0px;
+    border-radius: 5px;
+  }
+}
+
+/*   關閉內容   */
+.advisoryClose {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 15px;
+  @include size(30px);
+  span {
+    position: absolute;
+    @include size(100%, 2px);
+    display: block;
+    border-radius: 5px;
+    background-color: $black;
+    &:nth-child(1) {
+      transform: rotate(-45deg);
+    }
+    &:nth-child(2) {
+      transform: rotate(45deg);
+    }
+  }
+}

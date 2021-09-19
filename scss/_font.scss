@@ -1,0 +1,93 @@
+/* 
+	2020.12.30
+	Font _ 字體
+*/
+
+html {
+  font-size: 14px;
+  @include rwd($w-mb) {
+    font-size: 13.5px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.p,
+.span {
+  font-family: "Noto Sans TC", Arial, Verdana, sans-serif;
+}
+
+h1,
+.h1 {
+  font-size: 2.8rem;
+  line-height: 43px;
+}
+h2,
+.h2 {
+  font-size: 1.7rem;
+  letter-spacing: 1.4px;
+  line-height: 28px;
+}
+h3,
+.h3 {
+  font-size: 1.4rem;
+  letter-spacing: 0.4px;
+  line-height: 28px;
+}
+h4,
+.h4 {
+  font-size: 1.3rem;
+  letter-spacing: 0.3px;
+  line-height: 28px;
+}
+h5,
+.h5 {
+  font-size: 1.2rem;
+  letter-spacing: 0.3px;
+  line-height: 22px;
+}
+h6,
+.h6 {
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  line-height: 24px;
+}
+p,
+.p {
+  font-size: 0.9rem;
+  letter-spacing: 0.2px;
+}
+span,
+.span {
+  font-size: 0.64rem;
+  letter-spacing: 0.2px;
+}
+
+.displayH1 {
+  font-weight: $t-strong;
+  font-size: 3rem;
+  letter-spacing: 1.12px;
+  @include rwd($w-pad) {
+    font-size: 2.8rem;
+  }
+  @include rwd($w-mb) {
+    font-size: 2.4rem;
+  }
+}

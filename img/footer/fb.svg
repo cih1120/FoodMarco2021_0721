@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>footer/fb</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pc/footer" transform="translate(-988.000000, -38.000000)">
+            <g id="footer/fb" transform="translate(990.000000, 40.000000)">
+                <circle id="Oval" stroke="#FFFFFF" stroke-width="4" cx="30" cy="30" r="30"></circle>
+                <g id="facebook-app-symbol" transform="translate(21.000000, 12.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <path d="M12.1845045,37 L12.1845045,20.1237987 L17.4893867,20.1237987 L18.2852754,13.544892 L12.1845045,13.544892 L12.1845045,9.34521945 C12.1845045,7.44106898 12.6778572,6.14341333 15.2389119,6.14341333 L18.5,6.14198235 L18.5,0.257575465 C17.9360407,0.179348842 16.0001676,0 13.7470115,0 C9.04206234,0 5.82096972,3.06538652 5.82096972,8.69364892 L5.82096972,13.544892 L0.5,13.544892 L0.5,20.1237987 L5.82096972,20.1237987 L5.82096972,37 L12.1845045,37 Z" id="f_1_"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

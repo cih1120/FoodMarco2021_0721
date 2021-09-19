@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="33px" height="23px" viewBox="0 0 33 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>symbol/arrow_yellow</title>
+    <desc>Created with Sketch.</desc>
+    <g id="PC" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="5_businessStore2" transform="translate(-474.000000, -1537.000000)" fill="#FFE07D">
+            <g id="symbol/arrow" transform="translate(474.000000, 1535.000000)">
+                <g id="Group-14" transform="translate(0.000000, 1.000000)">
+                    <rect id="Rectangle" x="0" y="7.5" width="26.3561644" height="10" rx="3"></rect>
+                    <path d="M26.812727,4.83011128 L33.3744737,16.1625241 C34.4814432,18.074307 33.829013,20.5214893 31.9172301,21.6284587 C31.3081212,21.9811478 30.6167335,22.1668696 29.9128846,22.1668696 L16.7893912,22.1668696 C14.5802522,22.1668696 12.7893912,20.3760086 12.7893912,18.1668696 C12.7893912,17.4630207 12.975113,16.7716331 13.3278021,16.1625241 L19.8895488,4.83011128 C20.9965183,2.91832841 23.4437006,2.26589823 25.3554834,3.37286769 C25.9601733,3.72299806 26.4625967,4.22542138 26.812727,4.83011128 Z" id="Triangle" transform="translate(23.351470, 12.500332) rotate(-270.000000) translate(-23.351470, -12.500332) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

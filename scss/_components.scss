@@ -1,0 +1,540 @@
+/* 
+	2020.12.30
+	Components _ 元件
+*/
+/*------------------------------------*\
+ $TEXT
+\*------------------------------------*/
+.t-leftLine-primary {
+  display: block;
+  padding-left: 15px;
+  border-left: 6px solid $primary;
+}
+
+.t-underLine-primary {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  margin-bottom: 20px;
+  &:after {
+    content: "";
+    @include size(105%, 20px);
+    position: absolute;
+    z-index: -1;
+    left: -2.5%;
+    bottom: -10px;
+    display: block;
+    background-color: $primary;
+  }
+}
+
+.t-underLine-primary-small {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  margin-bottom: 5px;
+  &:after {
+    content: "";
+    @include size(105%, 15px);
+    position: absolute;
+    z-index: -1;
+    left: -2.5%;
+    bottom: -5px;
+    display: block;
+    background-color: $primary;
+  }
+}
+
+.title {
+  text-align: center;
+  .h2 {
+    font-weight: $t-strong;
+  }
+  .en_text {
+    color: $primary;
+    line-height: 24px;
+    font-weight: $t-strong;
+  }
+}
+
+/*------------------------------------*\
+ $CARD
+\*------------------------------------*/
+.card-ticket {
+  width: 100%;
+  @include df_center();
+  position: relative;
+  margin-bottom: 10px;
+  padding: 15px;
+  background-color: $white;
+  border: 3px solid $primary;
+  h3 {
+    width: 50%;
+    color: $primary;
+    font-weight: $t-strong;
+    text-align: center;
+  }
+  h6 {
+    width: 50%;
+    color: $muted;
+    line-height: 18px;
+  }
+  @include rwd($w-table) {
+    h3,
+    h6 {
+      width: 100%;
+    }
+    h6 {
+      text-align: center;
+    }
+  }
+  // 左右圓圈
+  &:after,
+  &:before {
+    content: "";
+    @include size(10px, 20px);
+    display: block;
+    position: absolute;
+    top: calc(50%-10px);
+    background-color: $white;
+    border: 3px solid $primary;
+  }
+  &:before {
+    left: -3px;
+    border-left: 3px solid $white;
+    border-radius: 0 20px 20px 0;
+  }
+  &:after {
+    right: -3px;
+    border-right: 3px solid $white;
+    border-radius: 20px 0 0 20px;
+  }
+}
+
+.card-rectangle {
+  @include df_center(column);
+  padding-top: 12px;
+  padding-bottom: 20px;
+  @include size(221px, 274px);
+  background-color: $white;
+  border: 4px solid $primary;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 8px 20px 0 rgba(255, 224, 125, 0.2);
+  h3 {
+    line-height: 28px;
+  }
+  i {
+    display: block;
+    @include size(103px);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  hr {
+    margin: 10px 0;
+    width: 70%;
+    border: 2px solid $secondary-primary;
+  }
+}
+
+.card-square {
+  @include df_center(column);
+  flex-wrap: wrap;
+  margin-top: 25px;
+  padding: 15px 0;
+  width: 22%;
+  border: 2px solid $primary;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 8px 20px 0 rgba(255, 224, 125, 0.2);
+  i {
+    display: block;
+    @include size(77px);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  @include rwd($w-pad) {
+    width: 45%;
+  }
+  @include rwd($w-mb) {
+    width: 80%;
+  }
+}
+
+/*------------------------------------*\
+ $BUTTON
+\*------------------------------------*/
+.btn-fix {
+  @include df_center();
+  bottom: 100px;
+  left: 0;
+  padding: 8px 23px;
+  z-index: 999;
+  border: 6px solid $white;
+  border-left: 0;
+  border-radius: 0 100px 100px 0;
+  box-shadow: 0 2px 25px 0 rgba(146, 146, 146, 0.45);
+  @include rwd($w-table) {
+    display: none;
+  }
+  a {
+    @include df_center();
+  }
+  &::after,
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+  }
+  &:before {
+    top: -59px;
+    @include size(92px, 53px);
+    @include bgimg("../img/symbol/btn_fix.png");
+  }
+  &:after {
+    @include size(12px);
+    top: -15px;
+    left: 20px;
+    background-color: $primary;
+    border: 3px solid $black;
+    border-radius: 50%;
+  }
+  i {
+    @include size(10px, 10px);
+    @include bgimg("../img/symbol/btn_fix_arrow.svg");
+    margin-left: 5px;
+  }
+}
+
+.btn-lg-primary {
+  padding: 28px 130px;
+  font-size: 1.6rem;
+  text-align: center;
+  letter-spacing: 0.4px;
+  border: 3px solid rgba($primary, 0);
+  border-radius: 48px;
+  background-color: $primary;
+  @include transition-middle($easeInOutSine);
+  @include rwd($w-mb) {
+    width: 90%;
+    padding: 28px 0;
+  }
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 24px 0 rgba(250, 190, 0, 0.61);
+  }
+}
+
+.btn-md {
+  display: inline-block;
+  padding: 10px 42px;
+  font-size: 1.4rem;
+  text-align: center;
+  border-radius: 29px;
+  @include transition-middle();
+  i {
+    @include transition-middle();
+  }
+  &:hover {
+    box-shadow: 0 0 15px 0 rgba($primary, 0.4);
+    i {
+      transform: translateX(5px);
+    }
+  }
+}
+
+/*------------------------------------*\
+ $CONTENT-ROW
+\*------------------------------------*/
+.contentRow {
+  @include df_center();
+  justify-content: space-around;
+  align-items: flex-start;
+  &__text {
+    width: 43%;
+    margin-top: 90px;
+    .h5 {
+      line-height: 25px;
+    }
+  }
+  &__img {
+    width: 48%;
+    img {
+      width: 100%;
+    }
+  }
+  @include rwd($w-pad) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__text {
+      width: 95%;
+      margin-top: 50px;
+      order: 1;
+    }
+    &__img {
+      margin-top: 5px;
+      width: 80%;
+      order: 2;
+    }
+  }
+}
+
+/*------------------------------------*\
+ $TABLE
+\*------------------------------------*/
+.table {
+  position: relative;
+  @include df_center(column);
+  overflow: hidden;
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &:before {
+    @include size(582px, 666px);
+    background-image: url("../img/deco/believe_bubble1.png");
+    bottom: -250px;
+    left: -10%;
+  }
+  &:after {
+    @include size(428px, 438px);
+    background-image: url("../img/deco/believe_bubble2.png");
+    right: -10%;
+    top: -100px;
+  }
+  @include rwd($w-table) {
+    &:before {
+      display: none;
+    }
+    &:after {
+      right: -38%;
+      top: -180px;
+    }
+  }
+  &__text,
+  &__img {
+    position: relative;
+    z-index: 5;
+  }
+  @include rwd($w-table) {
+    display: block;
+    &__img {
+      padding: 0 20px;
+      overflow-y: hidden;
+      overflow-x: scroll;
+      img {
+        @include size(800px, auto);
+        max-width: 700px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: rgba($secondary-primary, 0.4);
+      }
+      &::-webkit-scrollbar {
+        height: 4px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba($secondary-primary, 0.8);
+      }
+    }
+  }
+}
+
+/*------------------------------------*\
+ $QUESTION
+\*------------------------------------*/
+.question {
+  @include df_center(column);
+  padding-top: 110px;
+  padding-bottom: 30px;
+  &__list {
+    width: 85%;
+    @include rwd($w-mb) {
+      width: 90%;
+    }
+    li {
+      width: 100%;
+      a {
+        position: relative;
+        display: flex;
+        padding: 20px 0;
+        padding-right: 35px;
+        border-bottom: 2px solid $light;
+        line-height: 25px;
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%) rotate(0deg);
+          @include size(22px, 12px);
+          @include bgimg("../img/symbol/qaArrow.svg");
+        }
+      }
+      &:first-child {
+        a {
+          border-top: 0px;
+        }
+      }
+    }
+    &--active {
+      &:after {
+        transform: translateY(-50%) rotate(180deg) !important;
+      }
+    }
+    &_answer {
+      display: none;
+      padding: 20px 0;
+      padding-left: 33px;
+      border-bottom: 2px solid $light;
+    }
+  }
+  &__link {
+    @include df_center();
+    justify-content: flex-end;
+    width: 85%;
+    a {
+      display: block;
+      padding-bottom: 3px;
+      border-bottom: 2px solid $primary;
+      @include transition-fast();
+      &:after {
+        content: "";
+        display: inline-block;
+        margin-left: 8px;
+        @include bgimg("../img/symbol/qaArrow.svg");
+        @include size(5px, 10px);
+        @include transition-fast();
+        transform: translateX(0) rotate(-90deg);
+      }
+      &:hover {
+        letter-spacing: 1.2px;
+        &:after {
+          transform: translateX(3px) rotate(-90deg);
+        }
+      }
+    }
+    @include rwd($w-mb) {
+      width: 90%;
+    }
+  }
+}
+
+/*   強制載入字體   */
+.question {
+  font-family: "Noto Sans TC", Arial, Verdana, sans-serif !important;
+}
+
+/*------------------------------------*\
+ $BADGE
+\*------------------------------------*/
+.badge-primary {
+  display: inline-block;
+  padding: 5px 20px;
+  color: $primary;
+  border: 2px solid $primary;
+  border-radius: 15px;
+}
+
+/*------------------------------------*\
+ $ACTION
+\*------------------------------------*/
+.action {
+  &__download {
+    @include df_center(column);
+    img {
+      @include size(189px, 73px);
+    }
+    @include rwd($w-mb) {
+      .btn-lg {
+        width: 90%;
+        order: 2;
+      }
+      &_row {
+        @include df_center(column);
+        width: 90%;
+        order: 1;
+        a,
+        img {
+          width: 100%;
+          height: auto;
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+  &--waveBg {
+    width: 100%;
+    @include bgimg("../img/deco/action_bg.png");
+  }
+}
+
+/*------------------------------------*\
+ $GRADES-BOX
+\*------------------------------------*/
+.gradesBox {
+  h2 {
+    font-weight: $t-strong;
+  }
+}
+
+/*------------------------------------*\
+ $BREADCRUMBS
+\*------------------------------------*/
+.breadcrumbs {
+  padding: 30px 0;
+  &Nav {
+    @include df_center(row);
+    justify-content: flex-start;
+    &__item {
+      display: block;
+      position: relative;
+      padding-right: 15px;
+      color: $muted;
+      &::after {
+        content: ">";
+        display: block;
+        position: absolute;
+        right: 5px;
+        top: 0;
+      }
+    }
+    li:last-child {
+      a {
+        padding-right: 0px;
+        color: $dark;
+        &::after {
+          content: "";
+        }
+      }
+    }
+  }
+}
+
+/*------------------------------------*\
+ $ADVISORY
+\*------------------------------------*/
+.advisory {
+  margin-top: 15px;
+  a {
+    @include df_center(row);
+  }
+  &--underline {
+    &:after {
+      content: "";
+      display: block;
+      @include size(100%, 1px);
+      background-color: $primary;
+    }
+  }
+}

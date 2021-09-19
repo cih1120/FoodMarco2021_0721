@@ -1,0 +1,110 @@
+/* 
+	2020.12.30
+	mixin
+*/
+
+@mixin size($w,$h:$w){
+	width: $w;
+	height: $h;
+};
+
+@mixin df_center($dir:row){
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: $dir;
+	flex-wrap: wrap;
+};
+
+@mixin bgimg($url){
+	background-image: url($url);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+
+
+
+
+/*------------------------------------*\
+ $RESPONSIVE
+\*------------------------------------*/
+@mixin rwd($w){
+	@media(max-width:$w)    {
+		@content
+		}
+};
+
+@mixin disNone-pc(){
+	@include rwd($w-pc){
+		display: none;
+	}
+}
+
+@mixin disNone-pad(){
+	@include rwd($w-pad){
+		display: none;
+	}
+}
+
+@mixin disNone-table(){
+	@include rwd($w-table){
+		display: none;
+	}
+}
+
+@mixin disNone-mb(){
+	@include rwd($w-mb){
+		display: none;
+	}
+}
+
+@mixin disBlock-pc(){
+	display: none;
+	@include rwd($w-pc){
+		display: block;
+	}
+}
+
+@mixin disBlock-pad(){
+	display: none;
+	@include rwd($w-pad){
+		display: block;
+	}
+}
+
+@mixin disBlock-table(){
+	display: none;
+	@include rwd($w-table){
+		display: block;
+	}
+}
+
+@mixin disBlock-mb(){
+	display: none;
+	@include rwd($w-mb){
+		display: block;
+	}
+}
+
+
+
+
+
+/*------------------------------------*\
+ $TRANSITION
+\*------------------------------------*/
+@mixin transition-slow($ease:$easeInOutCirc){
+	transition: all 2s $ease;
+}
+
+@mixin transition-middle($ease:$easeInOutCirc){
+	transition: all 0.4s $ease;
+}
+
+@mixin transition-fast($ease:$easeInOutCirc){
+	transition: all 0.2s $ease;
+}
+
+

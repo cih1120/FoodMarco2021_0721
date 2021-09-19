@@ -1,0 +1,127 @@
+/* 
+	2021.01.26
+	tutorial _ 新手指南
+*/
+.tutorial{
+	.wrap{
+		@include rwd($w-mb){
+			width: 100%;
+		}
+	}
+}
+.tutorialHero{
+	width: 100%;
+	margin-top: 20px;
+	padding: 80px 5px 100px 0;
+	&__block{
+		@include df_center(row);
+		justify-content: space-between;
+		flex-wrap: nowrap;
+	}
+	&__left{
+		&_download{
+			@include df_center();
+			flex-wrap: nowrap;
+			img{
+				width: 189px;
+			}
+		}
+	}
+	&__right{
+		width: 60%;
+	}
+	@include rwd($w-table){
+		&__block{
+			flex-direction: column;
+			margin-top: 30px;
+		}
+		&__right{
+			width: 85%;
+			margin-top: 20px;
+		}
+	}
+}
+
+/*   tutorialHeader開始   */
+
+.tutorialHeader{
+	@include df_center();
+	justify-content: space-around;
+	&__list{
+		position: relative;
+		width: 25%;
+		background-color: $secondary-primary;
+		border-radius: 13px;
+		a{
+			height: 130px;
+			@include df_center(column);
+			color: $dark-primary;
+		}
+		&--active{
+			position: relative;
+			background-color: $primary;
+			a{
+				color: $black;
+			}
+			&:after{
+				content:'';
+				position: absolute;
+				left: 50%;
+				display: block;
+				@include size(0);
+				border: 20px solid transparent;
+				border-top-color: $primary;
+				transform: translateX(-50%);
+			}
+		}
+	}
+	@include rwd($w-table){
+		justify-content: center;
+		&__list{
+			width: 33.3333%;
+			border-radius: 0px;
+		}
+	}
+}
+
+/*   tutorialBar開始   */
+
+.tutorialSwiper{
+	width: 100%;
+	height: 600px;
+	position: relative;
+	overflow: hidden;
+	--swiper-theme-color: #FABE00;
+    --swiper-navigation-color: #FABE00;
+    --swiper-navigation-size: 30px;
+	.swiper-slide {
+		padding: 40px 0;
+		@include df_center;
+		align-items: flex-start;
+	  }
+	  &__content{
+		  margin-left: 50px;
+	  }
+	  .swiper-pagination-progressbar{
+		  height: 6px !important;
+		  background-color: $secondary-primary;
+		  border-radius: 21px;
+	  }
+	  @include rwd($w-pad){
+		  height: 700px;
+		.swiper-slide {
+			flex-direction: column;
+			flex-wrap: nowrap;
+			align-items: center;
+			img{
+				order :2;
+			}
+		  }
+		  &__content{
+			  margin-left: 0;
+			margin-bottom: 20px;
+			order: 1;
+		  }
+
+	  }
+}

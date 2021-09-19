@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="16px" viewBox="0 0 26 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>symbol/QaArrowDown</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="pc/question" transform="translate(-948.000000, -22.000000)" stroke="#FABE00" stroke-width="3">
+            <g id="Group-13">
+                <g id="Path-5" transform="translate(950.000000, 24.000000)">
+                    <g id="symbol/QaArrowDown">
+                        <polyline id="Path-3" points="0 -7.24420524e-15 11 12 22 0"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

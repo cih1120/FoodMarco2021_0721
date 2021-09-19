@@ -1,0 +1,432 @@
+/* 
+	2020.12.30
+	store _ 店家專區
+*/
+.storeHero {
+  width: 100%;
+  margin-top: 20px;
+  padding: 80px 5px 154px 0;
+  @include bgimg("../img/p_store/storeBg.jpg");
+
+  &__block {
+    @include rwd($w-table) {
+      margin-top: 30px;
+    }
+    @include rwd(333px) {
+      .displayH1 {
+        font-size: 2.3rem;
+      }
+    }
+    &_left {
+      @include df_center();
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      img {
+        width: 189px;
+      }
+    }
+  }
+}
+
+.storeContet {
+  position: relative;
+  padding: 55px 0;
+  background-color: $body;
+  .wrap {
+    @include rwd($w-mb) {
+      padding: 0 10px;
+    }
+  }
+  &__map {
+    @include size(100%, 300px);
+  }
+  // 原列表下漸層
+  // &:after {
+  //   content: "";
+  //   display: block;
+  //   position: absolute;
+  //   @include size(100%, 60px);
+  //   bottom: 50px;
+  //   pointer-events: none;
+  //   background-image: linear-gradient(
+  //     180deg,
+  //     rgba(249, 248, 245, 0) 0%,
+  //     #f9f8f5 90%
+  //   );
+  // }
+}
+
+/*   storeSelect   */
+
+.storeSelect {
+  width: 100%;
+  max-width: 367px;
+  padding: 10px 30px;
+  border: 1px solid $muted;
+  border-radius: 11px;
+  background: url("../img/p_store/storeTriangle.svg") no-repeat 95% center #fff;
+  font-size: 1.3rem;
+
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  //隱藏箭頭樣式
+  &::-ms-expand {
+    display: none;
+  }
+  //IE隱藏箭頭樣式
+}
+
+/*   storeSelect   */
+.storeCount {
+  @include df_center(row);
+  margin-top: 10px;
+  input {
+    @include size(1.5rem);
+  }
+  @include rwd($w-mb) {
+    input {
+      @include size(1rem);
+    }
+    h4 {
+      font-size: 1rem;
+    }
+  }
+}
+
+/*   storeCard   */
+
+.storeList {
+  position: relative;
+  @include df_center();
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0 -2%;
+  // height: 800px;
+  // overflow-y: scroll;
+  @include rwd($w-table) {
+    // height: 70vh;
+    // padding: 5px;
+  }
+}
+
+//餐廳卡片樣式
+.storeCard {
+  overflow: hidden;
+  position: relative;
+  @include size(31%, auto);
+  min-height: 415px;
+  margin: 0 1%;
+  margin-bottom: 35px;
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(151, 151, 151, 0.3);
+  border-bottom: 13px solid $primary;
+  &--sale {
+    border-bottom: 13px solid $warning;
+    &:after {
+      content: "";
+      @include bgimg("../img/p_store/badge.svg");
+      @include size(36px, 46px);
+      position: absolute;
+      top: 0;
+      left: 6px;
+      z-index: 5;
+      @include rwd($w-table) {
+        @include size(15px, 19px);
+        top: 12px;
+      }
+    }
+  }
+  &__top {
+    position: relative;
+    height: 210px;
+    background-color: $light;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    &--close {
+      h5 {
+        display: block;
+        position: absolute;
+        color: $white;
+        font-size: 1.3rem;
+        font-weight: $t-bold;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-shadow: 0 0 8px #000000;
+      }
+      &:before {
+        content: "";
+        background-color: rgba($black, 0.65);
+        @include size(100%);
+        display: block;
+      }
+    }
+  }
+  &__title {
+    position: relative;
+    padding: 10px 15px 0 15px;
+    h5 {
+      font-weight: $t-bold;
+      text-align: left;
+    }
+    &_tag {
+      display: block;
+      padding: 2px 12px;
+      position: absolute;
+      left: 0;
+      top: -28px;
+      &--area {
+        background-color: $secondary-primary;
+        color: $dark-primary;
+      }
+      &--sale {
+        top: -26px;
+        font-size: 1rem;
+        padding: 6px 12px;
+        left: 75px;
+        color: $white;
+        line-height: 1rem;
+        background-color: $warning;
+        i {
+          margin-right: 2px;
+        }
+      }
+    }
+  }
+  &__bottom {
+    padding: 0 15px;
+    width: 100%;
+    h6 {
+      color: $muted;
+    }
+  }
+  &__btnRow {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    .storeCard__btn {
+      right: 0;
+    }
+    @include rwd($w-table) {
+      width: 100%;
+      justify-content: flex-end;
+    }
+  }
+  &__btn {
+    position: relative;
+    margin-right: 15px;
+    padding: 3px 0;
+    @include df_center();
+    width: 85px;
+    right: calc(-95% + 85px);
+    bottom: 0px;
+    border: 1px solid $primary;
+    background-color: $white;
+    &--sale {
+      border: 1px solid $warning;
+      h6 {
+        color: $warning !important;
+      }
+      &:hover {
+        background-color: $warning !important;
+      }
+    }
+    h6 {
+      color: $primary;
+      transition: all 0.4s;
+    }
+    &_arrow {
+      display: block;
+      @include size(18px, 8px);
+      @include bgimg("../img/p_store/storeArrow-yellow.svg");
+      &--sale {
+        background-image: url("../img/p_store/storeArrow-red.svg");
+      }
+    }
+    &:hover {
+      background-color: $primary;
+      h6 {
+        color: $white !important;
+      }
+      .storeCard__btn_arrow {
+        @include bgimg("../img/p_store/storeArrow-white.svg");
+      }
+    }
+  }
+
+  // pad樣式
+  @include rwd(870px) {
+    width: 48%;
+  }
+
+  @include rwd($w-table) {
+    padding: 10px 0 8px 0;
+    margin-bottom: 0;
+    @include df_center(row);
+    justify-content: space-between;
+    background-color: Transparent;
+    box-shadow: 0 0 0 0 rgba($white, 0);
+    border-radius: 0;
+    border-bottom: 0px;
+    //清除原本樣式
+    @include size(100%, auto);
+    min-height: auto;
+    border-bottom: 1px solid $muted;
+    &:last-child {
+      border-bottom: 0px solid Transparent;
+    }
+    &__top {
+      @include size(35%, 68px);
+      border-radius: 6px;
+    }
+
+    &__title {
+      @include df_center(column);
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 65%;
+      hr {
+        display: none;
+      }
+      &_tagLine {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      &_tag {
+        border-radius: 14px;
+        position: static;
+        &--area {
+          margin-right: 10px;
+          background-color: $primary;
+          color: $white;
+        }
+      }
+    }
+    &__bottom {
+      padding: 0;
+    }
+
+    &__btn {
+      right: auto;
+    }
+  }
+  //詳細優惠pop
+  &__pop {
+    @include df_center();
+    @include size(90%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -30%);
+    padding: 20px;
+    background-color: $warning;
+    z-index: -5;
+    opacity: 0;
+    // display: none;
+    transition: all 0.5s $easeOutCubic;
+    &_close {
+      // @include size(16px, 2px);
+      position: absolute;
+      right: 10px;
+      top: 16px;
+
+      span {
+        background-color: $white;
+        display: block;
+        @include size(22px, 2px);
+      }
+      span:first-child {
+        transform: translateY(0px) rotate(45deg);
+      }
+      span:last-child {
+        transform: translateY(-2px) rotate(-45deg);
+      }
+    }
+    &--open {
+      display: flex;
+      transform: translate(-50%, -50%);
+      opacity: 1;
+      z-index: 10;
+    }
+  }
+}
+
+//地區選單樣式
+.storeSelectBar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  width: 100%;
+  &--active {
+    z-index: 9999;
+    position: fixed;
+    z-index: 9999;
+    bottom: 0;
+    width: 105%;
+    left: -5%;
+    padding: 6px 10%;
+    background-color: rgba($white, 0.8);
+    justify-content: center;
+    margin-bottom: 0;
+    flex-wrap: nowrap;
+    .storeSelect {
+      max-width: 200px;
+      padding: 10px;
+      font-size: 1rem;
+    }
+    .storeCount {
+      flex-wrap: nowrap;
+      padding: 5px;
+      margin: 0;
+      .h4 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+      @include rwd($w-mb) {
+        .h4 {
+          margin: 0;
+          font-size: 0.8rem;
+          line-height: 1.2rem;
+        }
+        input {
+          @include size(2rem);
+        }
+      }
+    }
+  }
+}
+
+//下方分頁樣式
+.storeListNav {
+  @include df_center();
+  &__item {
+    display: block;
+    border-radius: 50%;
+    &--active {
+      font-weight: $t-bold;
+      border: 1px solid $primary;
+      border-radius: 50%;
+      a {
+        color: $dark-primary;
+      }
+    }
+    a {
+      transition: all 0.2s;
+      display: block;
+      color: $muted;
+      @include size(2.5rem);
+      @include df_center();
+      &:hover {
+        color: $dark-primary;
+      }
+    }
+  }
+}

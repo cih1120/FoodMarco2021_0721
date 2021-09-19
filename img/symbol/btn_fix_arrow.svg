@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="10px" viewBox="0 0 9 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Triangle</title>
+    <desc>Created with Sketch.</desc>
+    <g id="PC_切圖用" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1_home" transform="translate(-115.000000, -1720.000000)" fill="#FFFFFF">
+            <g id="Group-31" transform="translate(0.000000, 1703.753277)">
+                <path d="M120.894427,17.7888544 L124.276393,24.5527864 C124.523382,25.0467649 124.323158,25.6474379 123.82918,25.8944272 C123.690324,25.9638549 123.537211,26 123.381966,26 L116.618034,26 C116.065749,26 115.618034,25.5522847 115.618034,25 C115.618034,24.8447549 115.654179,24.6916418 115.723607,24.5527864 L119.105573,17.7888544 C119.352562,17.2948759 119.953235,17.0946515 120.447214,17.3416408 C120.640741,17.4384045 120.797663,17.595327 120.894427,17.7888544 Z" id="Triangle" transform="translate(120.000000, 21.000000) rotate(-270.000000) translate(-120.000000, -21.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

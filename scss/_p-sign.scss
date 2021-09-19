@@ -1,0 +1,38 @@
+/* 
+	2021.05.24
+	sign _ 線上簽約系統
+*/
+.signExplanation {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 50px;
+  @include rwd($w-pad) {
+    flex-direction: column;
+  }
+  &__content,
+  &__img {
+    display: flex;
+    flex-direction: column;
+  }
+  &__content {
+    align-items: flex-start;
+  }
+  &__img {
+    width: 50%;
+    align-self: center;
+    justify-content: center;
+    .triangle {
+      display: inline-block;
+    }
+    @include rwd($w-pad) {
+      margin-top: 40px;
+    }
+  }
+}
+.dottedSign__login {
+  width: 100%;
+  height: 400px;
+  @include df_center();
+}
